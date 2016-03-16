@@ -10,6 +10,9 @@
     "sass",
     "css"
   ],
+  "main": [
+    "dist/css/ces.css"
+  ],
   "license": "MIT",
   "private": true,
   "ignore": [
