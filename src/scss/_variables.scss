@@ -1,0 +1,112 @@
+
+$brand-primary: rgb(35, 163, 221);
+$brand-success: #B5CA00;
+$brand-info: #1B7DAA;
+$brand-warning: #DD7800;
+$brand-danger: #E43B53;
+
+$font-family-sans-serif: "Droid serif";
+$font-family-serif: "Droid serif";
+$font-family-monospace: Monaco, Consolas, "Courier New", monospace;
+
+$headings-color: #00426B;
+
+$table-bg-accent: rgb(35, 163, 221);
+$table-bg-hover: rgb(35, 163, 221);
+$table-border-color: rgb(255, 255, 255);
+
+$btn-default-color: rgb(255, 255, 255);
+$btn-default-bg: #086690;
+$btn-default-border: darken($btn-default-bg, 5%);
+$btn-primary-color: rgb(255, 255, 255);
+$btn-success-color: rgb(255, 255, 255);
+$btn-info-color: rgb(255, 255, 255);
+$btn-warning-color: rgb(255, 255, 255);
+$btn-danger-color: rgb(255, 255, 255);
+
+$input-bg-disabled: rgb(255, 255, 255);
+$input-color: rgb(35, 163, 221);
+$input-border: rgb(35, 163, 221);
+$input-border-focus: rgb(35, 163, 221);
+$input-color-placeholder: rgb(35, 163, 221);
+
+$legend-color: rgb(255, 255, 255);
+$legend-border-color: rgb(255, 255, 255);
+
+$input-group-addon-bg: rgb(255, 255, 255);
+$input-group-addon-border-color: rgb(35, 163, 221);
+
+$dropdown-border: rgb(255, 255, 255);
+$dropdown-fallback-border: rgb(255, 255, 255);
+$dropdown-divider-bg: rgb(255, 255, 255);
+$dropdown-link-color: #23A3DD;
+$dropdown-link-hover-color: #23A3DD;
+$dropdown-link-hover-bg: rgb(255, 255, 255);
+$dropdown-link-active-color: rgb(255, 255, 255);
+$dropdown-link-active-bg: #23A3DD;
+$dropdown-link-disabled-color: rgb(255, 255, 255);
+$dropdown-header-color: #23A3DD;
+
+$navbar-default-color: #1B7DAA;
+$navbar-default-bg: rgb(27, 125, 170);
+$navbar-default-link-color: rgb(255,255,255);
+$navbar-default-link-hover-color: rgb(255, 255, 255);
+$navbar-default-link-active-color: rgb(255, 255, 255);
+$navbar-default-link-disabled-color: rgb(204, 204, 204);
+$navbar-default-toggle-hover-bg: rgb(221, 221, 221);
+$navbar-default-toggle-icon-bar-bg: rgb(136, 136, 136);
+$navbar-default-toggle-border-color: rgb(221, 221, 221);
+
+$navbar-inverse-bg: #23A3DD;
+$navbar-inverse-border: #23A3DD;
+$navbar-inverse-link-color: rgb(255, 255, 255);
+$navbar-inverse-brand-color: rgb(255, 255, 255);
+
+$pagination-border: #23A3DD;
+$pagination-hover-border: #23A3DD;
+$pagination-disabled-border: #23A3DD;
+
+$pager-border: #23A3DD;
+
+$jumbotron-color: #086690;
+$jumbotron-heading-color: #086690;
+
+$state-success-text: #B5CA00;
+$state-success-bg: #B5CA00;
+$state-info-text: #1B7DAA;
+$state-info-bg: rgb(27, 125, 170);
+// $state-info-border: darken(spin($state-info-bg, -10), 7%)rgb(49, 112, 143);
+$state-warning-text: rgb(221, 120, 0);
+$state-warning-bg: #DD7800;
+$state-danger-text: rgb(228, 59, 83);
+$state-danger-bg: #E43B53;
+
+$tooltip-bg: #23A3DD;
+
+$popover-border-color: #23A3DD;
+$popover-fallback-border-color: #23A3DD;
+$popover-title-bg: #23A3DD;
+
+$modal-content-border-color: #23A3DD;
+
+$alert-success-text: rgb(255, 255, 255);
+$alert-info-text: rgb(255, 255, 255);
+$alert-warning-text: rgb(255, 255, 255);
+$alert-danger-text: rgb(255,255,255);
+
+$list-group-link-color: #23A3DD;
+$list-group-link-heading-color: #00426B;
+
+$panel-default-text: #23A3DD;
+$panel-success-text: rgb(255, 255, 255) ;
+$panel-info-text: rgb(255, 255, 255) ;
+$panel-warning-text: rgb(255, 255, 255) ;
+$panel-danger-text: rgb(255, 255, 255) ;
+
+$well-bg: #23A3DD;
+
+$badge-bg: #23A3DD;
+
+$text-muted: #23A3DD;
+
+$abbr-border-color: rgb(35, 163, 221);
