@@ -14,8 +14,8 @@ gulp.task('scss', function(){
    					 .pipe($.sass())
 						 .pipe(gulp.dest('./dist/css'))
 						 .pipe($.cssnano())
-						 .pipe($.rename('ces.min'))
-						 .pipe($.sourcemaps.write('.', {mapFile: 'ces.min.map'}))
+						 .pipe($.rename('ces.min.css'))
+						 .pipe($.sourcemaps.write('.'))
 						 .pipe(gulp.dest('./dist/css'));
 });
 
