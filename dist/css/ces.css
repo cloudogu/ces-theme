@@ -1453,7 +1453,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Monaco, Consolas, "Courier New", monospace; }
+  font-family: "Droid Sans Mono", Monaco, Consolas, "Courier New", monospace; }
 
 code {
   padding: 2px 4px;
