@@ -1055,7 +1055,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Droid serif";
+  font-family: "Droid Sans", sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -5187,7 +5187,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Droid serif";
+  font-family: "Droid Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5300,7 +5300,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Droid serif";
+  font-family: "Droid Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5816,3 +5816,30 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+.thumbnail-primary-bg {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857;
+  background-color: #23a3dd;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out; }
+  .thumbnail-primary-bg > img,
+  .thumbnail-primary-bg a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto; }
+  .thumbnail-primary-bg .caption {
+    padding: 9px;
+    color: #333333; }
+
+a.thumbnail-primary-bg:hover,
+a.thumbnail-primary-bg:focus,
+a.thumbnail-primary-bg.active {
+  border-color: #23a3dd; }
