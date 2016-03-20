@@ -5843,3 +5843,15 @@ a.thumbnail-primary-bg:hover,
 a.thumbnail-primary-bg:focus,
 a.thumbnail-primary-bg.active {
   border-color: #23a3dd; }
+
+.vertical-center {
+  width: 100%;
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center; }
+  .vertical-center .row {
+    width: 100%; }
+
+.spacer-top {
+  margin-top: 5px; }

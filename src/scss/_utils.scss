@@ -1,0 +1,17 @@
+.vertical-center {
+  width: 100%;
+
+  min-height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  .row {
+    width: 100%;
+  }
+}
+
+.spacer-top {
+  margin-top: 5px;
+}
