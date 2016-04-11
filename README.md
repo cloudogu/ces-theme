@@ -44,6 +44,6 @@ gulp
 
 ```json
 "dependencies": {
-  "git+ssh://git@github.com/cloudogu/ces-theme.git"
+  "ces-theme": "git+ssh://git@github.com/cloudogu/ces-theme.git"
 }
 ```
