@@ -15,8 +15,8 @@ lib.properties = {
 	opacity: 1.00,
 	webfonts: {},
 	manifest: [
-		{src:"images/unicorn-bob.png", id:"UnicornBob"},
-		{src:"images/dynamic-clouds.png", id:"dynamic-clouds"}
+		{src: context + "images/unicorn-bob.png", id:"UnicornBob"},
+		{src: context + "images/dynamic-clouds.png", id:"dynamic-clouds"}
 	]
 };
 
