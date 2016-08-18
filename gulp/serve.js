@@ -1,7 +1,7 @@
 module.exports = function(gulp, $, info, paths){
   'use strict';
 
-  gulp.task('serve', ['scss', 'logo', 'favicon'], function(){
+  gulp.task('serve', ['scss', 'scripts', 'logo', 'favicon'], function(){
     var browserSync = require('browser-sync').create();
 
     var files = [
