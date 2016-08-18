@@ -13,7 +13,7 @@ $brand-primary: #23A3DD;
 $brand-primary-dark: #086690;
 $brand-primary-darker: #00426B;
 $brand-success: #B5CA00;
-$brand-info: #1B7DAA;
+$brand-info: $brand-primary-darker;
 $brand-warning: #DD7800;
 $brand-danger: #E43B53;
 
@@ -28,7 +28,7 @@ $table-bg-hover: $brand-primary;
 $table-border-color: $white;
 
 $btn-default-color: $white;
-$btn-default-bg: $brand-primary-dark;
+$btn-default-bg: $gray-light;
 $btn-default-border: darken($btn-default-bg, 5%);
 $btn-primary-color: $white;
 $btn-success-color: $white;
@@ -59,8 +59,8 @@ $dropdown-link-active-bg: $brand-primary;
 $dropdown-link-disabled-color: $white;
 $dropdown-header-color: $brand-primary;
 
-$navbar-default-color: $brand-info;
-$navbar-default-bg: $brand-info;
+$navbar-default-color: #1B7DAA;
+$navbar-default-bg: #1B7DAA;
 $navbar-default-link-color: $white;
 $navbar-default-link-hover-color: $white;
 $navbar-default-link-active-color: $white;
