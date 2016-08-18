@@ -15,10 +15,14 @@
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.1",
+    "gulp-imagemin": "^3.0.3",
     "gulp-load-plugins": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-responsive": "^2.2.0",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0"
+  },
+  "dependencies": {
+    "font-awesome": "^4.6.3"
   }
 }

@@ -29,6 +29,7 @@ module.exports = function(gulp, $, info, paths){
   						 .pipe($.responsive({
   							 '*.png': resizecfg
   						 }))
+                         .pipe($.imagemin({verbose: true}))
   						 .pipe(gulp.dest(paths.target + '/images/logo'));
   });
 
