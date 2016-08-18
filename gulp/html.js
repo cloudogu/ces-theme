@@ -3,13 +3,14 @@ module.exports = function(gulp, $, info, paths){
 
   gulp.task('html', function(){
   	return gulp.src(paths.src + '/*.html')
-                         .pipe($.htmlmin({
-                             minifyJS: true,
-                             minifyCSS: true,
-                             removeComments: true,
-                             collapseWhitespace: true
-                         }))
-  						 .pipe(gulp.dest(paths.target));
+               .pipe($.replace('{{context}}', ''))
+               .pipe($.htmlmin({
+                    minifyJS: true,
+                    minifyCSS: true,
+                    removeComments: true,
+                    collapseWhitespace: true
+               }))
+               .pipe(gulp.dest(paths.target));
   });
 
 };
