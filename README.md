@@ -23,7 +23,7 @@ bower install
 * npm or bower
 ```
 "dependencies": {
-  "ces-theme": "git+ssh://git@github.com/cloudogu/ces-theme.git"
+  "ces-theme": "git://github.com/cloudogu/ces-theme.git"
 }
 ```
 

@@ -19,6 +19,7 @@
     "gulp-imagemin": "^3.0.3",
     "gulp-load-plugins": "^1.2.0",
     "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
     "gulp-responsive": "^2.2.0",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",

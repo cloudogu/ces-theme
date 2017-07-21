@@ -1,7 +1,7 @@
 module.exports = function(gulp, $, info, paths){
   'use strict';
 
-  gulp.task('serve', ['scss', 'scripts', 'logo', 'favicon'], function(){
+  gulp.task('serve', ['scss', 'scripts', 'logo', 'favicon', 'images', 'html'], function(){
     var browserSync = require('browser-sync').create();
 
     var files = [
@@ -13,11 +13,12 @@ module.exports = function(gulp, $, info, paths){
 
   	browserSync.init(files, {
   		server: {
-  			baseDir: [paths.src, paths.target, paths.vendor]
+  			baseDir: [paths.target, paths.src, paths.vendor]
   		}
   	});
 
   	gulp.watch([paths.src + '/scss/*.scss'], ['scss']);
+    gulp.watch([paths.src + '/*.html'], ['html']);
   });
 
 };
