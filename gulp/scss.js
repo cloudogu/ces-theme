@@ -6,7 +6,7 @@ module.exports = function(gulp, $, info, paths){
   						 .pipe($.sourcemaps.init())
      					 .pipe($.sass())
   						 .pipe(gulp.dest(paths.target + '/css'))
-  						 .pipe($.cssnano())
+  						 .pipe($.cssnano({ autoprefixer: false }))
   						 .pipe($.rename({ suffix: '.min' }))
   						 .pipe($.sourcemaps.write('.'))
   						 .pipe(gulp.dest(paths.target + '/css'));
