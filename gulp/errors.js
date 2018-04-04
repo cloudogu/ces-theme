@@ -20,6 +20,13 @@ module.exports = function (gulp, $, info, paths) {
             .pipe($.sourcemaps.write('.'))
             .pipe(gulp.dest(paths.target + '/errors/css'));
 
+        gulp.src(paths.src + '/scss/ces.scss')
+            .pipe($.sourcemaps.init())
+            .pipe($.sass())
+            .pipe($.cssnano())
+            .pipe($.sourcemaps.write('.'))
+            .pipe(gulp.dest(paths.target + '/errors/css'));
+
         gulp.src(paths.src + '/scripts/{4,5}*.js')
             .pipe($.sourcemaps.init())
             .pipe($.uglify())
