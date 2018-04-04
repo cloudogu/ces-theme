@@ -14,7 +14,8 @@ body, html {
   right: 1vw;
   top: 1vw; }
   .logo img {
-    width: 18vw; }
+    width: 12vw;
+    /*eig 18*/ }
 
 .message {
   z-index: 20;
@@ -30,6 +31,23 @@ body, html {
     font-size: 20vw; }
   .message .description {
     font-size: 4vw; }
+
+.informationbox {
+  z-index: 20;
+  display: inline-block;
+  text-align: center;
+  display: block;
+  overflow: auto;
+  position: relative;
+  padding-left: 50vw;
+  padding-top: 20vw; }
+
+.sizing {
+  display: inline-block;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  color: #086690;
+  background-color: #eeeeee; }
 
 .background {
   position: absolute;
