@@ -3,6 +3,7 @@
 https://cloudogu.com
 
 Theme for CES WebApplications, based on Twitter Bootstrap.
+http://cloudogu.github.io/ces-theme/
 
 ### Build
 * Install the following:
@@ -18,7 +19,6 @@ npm install
 bower install
 ```
 * Start development server with `gulp serve` and build with `gulp`
-* Update [github pages](http://cloudogu.github.io/ces-theme/) with `gulp deploy`
 
 ### Usage
 * npm or bower
