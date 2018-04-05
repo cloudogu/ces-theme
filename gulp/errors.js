@@ -45,6 +45,18 @@ module.exports = function (gulp, $, info, paths) {
             .pipe($.imagemin({ verbose: true }))
             .pipe(gulp.dest(paths.target + '/errors/images/logo'));
 
+        gulp.src(paths.src + '/images/logo/logo-white.png')
+            .pipe($.responsive({
+                '*.png': {
+                    width: 320,
+                    rename: {
+                        suffix: '-320px'
+                    }
+                }
+            }))
+            .pipe($.imagemin({ verbose: true }))
+            .pipe(gulp.dest(paths.target + '/errors/images/logo'));
+
         gulp.src(paths.src + '/images/*.{jpg,png,gif}')
             .pipe($.imagemin({ verbose: true }))
             .pipe(gulp.dest(paths.target + '/errors/images'));
