@@ -1,4 +1,4 @@
-#![Cloudogu logo](https://cloudogu.com/images/logo.png)
+![Cloudogu logo](https://cloudogu.com/images/logo.png)
 # CES-Theme
 https://cloudogu.com
 
@@ -18,6 +18,7 @@ npm install
 bower install
 ```
 * Start development server with `gulp serve` and build with `gulp`
+* Update [github pages](http://cloudogu.github.io/ces-theme/) with `gulp deploy`
 
 ### Usage
 * npm or bower
