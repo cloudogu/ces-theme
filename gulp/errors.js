@@ -16,6 +16,13 @@ module.exports = function (gulp, $, info, paths) {
         gulp.src(paths.src + '/scss/errors.scss')
             .pipe($.sourcemaps.init())
             .pipe($.sass())
+            .pipe($.cssnano({ autoprefixer: false }))
+            .pipe($.sourcemaps.write('.'))
+            .pipe(gulp.dest(paths.target + '/errors/css'));
+
+        gulp.src(paths.src + '/scss/ces.scss')
+            .pipe($.sourcemaps.init())
+            .pipe($.sass())
             .pipe($.cssnano())
             .pipe($.sourcemaps.write('.'))
             .pipe(gulp.dest(paths.target + '/errors/css'));
@@ -27,6 +34,18 @@ module.exports = function (gulp, $, info, paths) {
             .pipe(gulp.dest(paths.target + '/errors/scripts'));
 
         gulp.src(paths.src + '/images/logo/blib-white.png')
+            .pipe($.responsive({
+                '*.png': {
+                    width: 320,
+                    rename: {
+                        suffix: '-320px'
+                    }
+                }
+            }))
+            .pipe($.imagemin({ verbose: true }))
+            .pipe(gulp.dest(paths.target + '/errors/images/logo'));
+
+        gulp.src(paths.src + '/images/logo/logo-white.png')
             .pipe($.responsive({
                 '*.png': {
                     width: 320,

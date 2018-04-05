@@ -20,11 +20,11 @@ body, html {
 .logo {
     z-index: 20;
     position: absolute;
-    right: 1vw;
-    top: 1vw;
+    right: 1.5vw;
+    top: 1.5vw;
 
     img {
-        width: 18vw;
+        width: 6.5vw;
     }
 }
 
@@ -46,7 +46,34 @@ body, html {
     .description {
         font-size: 4vw;
     }
-} 
+}
+
+.informationbox {
+    z-index: 20;
+    color: #E43B53;
+    display: inline-block;
+    text-align: center;
+    display: block;
+    overflow: auto;
+    position: relative;
+    padding-left: 50vw;
+    padding-top: 13vw;
+}
+
+.sizing {
+    display: inline-block;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 0vw !important;
+    padding-bottom: 3vw !important;
+    border-radius: 0.5vw;
+
+    h1 {
+        color: #E43B53 !important;
+        padding-top: 2vw !important;
+        padding-bottom: 1vw !important;
+    }
+}
 
 .background {
     position: absolute;
@@ -56,6 +83,6 @@ body, html {
     width: 80%;
 
     img {
-        width: 100%;
+        width: 70%;
     }
 } 
