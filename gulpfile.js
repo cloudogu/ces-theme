@@ -16,6 +16,7 @@ tasks.forEach(function(file){
   require('./gulp/' + file)(gulp, $, info, paths);
 });
 
+//* Update [github pages](http://cloudogu.github.io/ces-theme/) with `gulp deploy`
 gulp.task('deploy', function () {
   return gulp.src("./dist/**/*")
     .pipe(deploy())
