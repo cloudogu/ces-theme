@@ -14,8 +14,7 @@ body, html {
   right: 1vw;
   top: 1vw; }
   .logo img {
-    width: 12vw;
-    /*eig 18*/ }
+    width: 6.5vw; }
 
 .message {
   z-index: 20;
@@ -55,4 +54,4 @@ body, html {
   left: 1vw;
   width: 80%; }
   .background img {
-    width: 100%; }
+    width: 70%; }
