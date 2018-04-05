@@ -11,8 +11,8 @@ body, html {
 .logo {
   z-index: 20;
   position: absolute;
-  right: 1vw;
-  top: 1vw; }
+  right: 1.5vw;
+  top: 1.5vw; }
   .logo img {
     width: 6.5vw; }
 
@@ -40,12 +40,19 @@ body, html {
   overflow: auto;
   position: relative;
   padding-left: 50vw;
-  padding-top: 20vw; }
+  padding-top: 13vw; }
 
 .sizing {
   display: inline-block;
-  padding-left: 5vw;
-  padding-right: 5vw; }
+  padding-left: 3vw;
+  padding-right: 3vw;
+  padding-top: 0vw !important;
+  padding-bottom: 3vw !important;
+  border-radius: 0.5vw; }
+  .sizing h1 {
+    color: #E43B53 !important;
+    padding-top: 2vw !important;
+    padding-bottom: 1vw !important; }
 
 .background {
   position: absolute;
