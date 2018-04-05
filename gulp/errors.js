@@ -16,7 +16,7 @@ module.exports = function (gulp, $, info, paths) {
         gulp.src(paths.src + '/scss/errors.scss')
             .pipe($.sourcemaps.init())
             .pipe($.sass())
-            .pipe($.cssnano())
+            .pipe($.cssnano({ autoprefixer: false }))
             .pipe($.sourcemaps.write('.'))
             .pipe(gulp.dest(paths.target + '/errors/css'));
 
