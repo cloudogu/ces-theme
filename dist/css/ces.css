@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
- * Bootstrap v3.4.0 (https://getbootstrap.com/)
- * Copyright 2011-2018 Twitter, Inc.
+ * Bootstrap v3.4.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -5824,3 +5824,42 @@ a.thumbnail-primary-bg.active {
 
 .spacer-top {
   margin-top: 5px; }
+
+.alert-danger-inverse {
+  color: #d20000;
+  background-color: #FFDFDF;
+  border-color: #e1255f; }
+  .alert-danger-inverse hr {
+    border-top-color: #cf1d54; }
+  .alert-danger-inverse .alert-link {
+    color: #9f0000; }
+
+.alert-success-inverse {
+  color: #5B6900;
+  background-color: #E6EDA8;
+  border-color: #b1a500; }
+  .alert-success-inverse hr {
+    border-top-color: #978e00; }
+  .alert-success-inverse .alert-link {
+    color: #2f3600; }
+
+.table > thead > tr > td.inactive,
+.table > thead > tr > th.inactive,
+.table > thead > tr.inactive > td,
+.table > thead > tr.inactive > th,
+.table > tbody > tr > td.inactive,
+.table > tbody > tr > th.inactive,
+.table > tbody > tr.inactive > td,
+.table > tbody > tr.inactive > th,
+.table > tfoot > tr > td.inactive,
+.table > tfoot > tr > th.inactive,
+.table > tfoot > tr.inactive > td,
+.table > tfoot > tr.inactive > th {
+  background-color: #777777; }
+
+.table-hover > tbody > tr > td.inactive:hover,
+.table-hover > tbody > tr > th.inactive:hover,
+.table-hover > tbody > tr.inactive:hover > td,
+.table-hover > tbody > tr:hover > .inactive,
+.table-hover > tbody > tr.inactive:hover > th {
+  background-color: #6a6a6a; }

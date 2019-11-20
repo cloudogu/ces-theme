@@ -1,4 +1,16 @@
 @import "variables";
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "thumbnail-primary";
 @import "utils";
+
+
+.alert-danger-inverse {
+  @include alert-variant($alert-danger-inverse-bg, $alert-danger-border, $alert-danger-inverse-text);
+}
+
+.alert-success-inverse {
+  @include alert-variant($alert-success-inverse-bg, $alert-success-border, $alert-success-inverse-text);
+}
+
+@include table-row-variant('inactive', $table-bg-inactive);

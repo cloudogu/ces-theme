@@ -13,9 +13,13 @@ $brand-primary: #23A3DD;
 $brand-primary-dark: #086690;
 $brand-primary-darker: #00426B;
 $brand-success: #B5CA00;
+$brand-success-light: #E6EDA8;
+$brand-success-dark: #5B6900;
 $brand-info: $brand-primary-darker;
 $brand-warning: #DD7800;
 $brand-danger: #E43B53;
+$brand-danger-light: #FFDFDF;
+$brand-danger-dark: #d20000;
 
 $font-family-sans-serif: "Droid Sans", sans-serif;
 $font-family-serif: "Droid Serif", serif;
@@ -24,6 +28,7 @@ $font-family-monospace: 'Droid Sans Mono', Monaco, Consolas, "Courier New", mono
 $headings-color: $brand-primary-darker;
 
 $table-bg-accent: $brand-primary;
+$table-bg-inactive: $gray-light;
 $table-bg-hover: $brand-primary;
 $table-border-color: $white;
 
@@ -102,9 +107,15 @@ $popover-title-bg: $brand-primary;
 $modal-content-border-color: $brand-primary;
 
 $alert-success-text: $white;
+$alert-success-inverse-text: $brand-success-dark;
+$alert-success-inverse-bg: $brand-success-light;
+
 $alert-info-text: $white;
 $alert-warning-text: $white;
+
 $alert-danger-text: $white;
+$alert-danger-inverse-text: $brand-danger-dark;
+$alert-danger-inverse-bg: $brand-danger-light;
 
 $list-group-link-color: $brand-primary;
 $list-group-link-heading-color: $brand-primary-darker;
