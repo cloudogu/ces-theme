@@ -1,4 +1,6 @@
-$font-color: #E43B53; 
+@import "variables";
+
+$font-color: $white;
 $font-family: "Droid Sans", sans-serif;
 
 @mixin gradient-background($c1, $c2, $c3, $c4){
@@ -50,7 +52,7 @@ body, html {
 
 .informationbox {
     z-index: 20;
-    color: #E43B53;
+    color: $white;
     display: inline-block;
     text-align: center;
     display: block;
