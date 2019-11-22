@@ -606,7 +606,7 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <div class="well bs-component">
+            <div class="bs-component">
               <form class="form-horizontal">
                 <fieldset>
                   <legend>Legend</legend>
@@ -906,8 +906,7 @@
         </div>
       </div>
 
-      <!-- Indicators
-      ================================================== -->
+      <!-- Indicators ================================================== -->
       <div class="bs-docs-section">
 
         <div class="row">
@@ -998,8 +997,7 @@
         </div>
       </div>
 
-      <!-- Progress bars
-      ================================================== -->
+      <!-- Progress bars ================================================== -->
       <div class="bs-docs-section">
 
         <div class="row">
@@ -1072,8 +1070,7 @@
         </div>
       </div>
 
-      <!-- Containers
-      ================================================== -->
+      <!-- Containers ================================================== -->
       <div class="bs-docs-section">
 
         <div class="row">
@@ -1275,7 +1272,16 @@
           <div class="col-lg-6">
             <h4>Modals</h4>
             <div class="bs-component">
-              <div class="modal">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
+                Standard modal
+              </button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">
+                Warning modal
+              </button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3">
+                Error modal
+              </button>
+              <div class="modal" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -1288,6 +1294,33 @@
                     <div class="modal-footer">
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                       <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal modalWarning" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+
+                    <div class="modal-body">
+                      <h3><i class="glyphicon glyphicon-warning-sign"></i> Es kann bis zu 30 Sekunden dauern, bis die Sicherung beginnt.</h3>
+                      <p>Der Wartungsmodus wird in Kürze in Kraft gesetzt. Aus Sicherheitsgründen sollten Sie weitere Interaktionen vermeiden, bis die Sicherung den Wartungsmodus gestartet hat.
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="modal modalError" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <h3><i class="glyphicon glyphicon-remove-circle"></i>  2 errors occured</h3>
+                      <p>
+                        • failed to execute step Back up volume data: failed to back up /var/lib/postgresql with back up manager : failed to backup /var/lib/ces/postgresql/volumes/data: failed to backup target/var/lib/ces/postgresql/volumes/data: restic failed to backup /var/lib/ces/postgresql/volumes/data: Command restic [backup /var/lib/ces/postgresql/
+                        volumes/data --tag ed7e7f52] returned error: : exit status 1<br><br>
+                        • failed to execute step Updated Backup descriptor in backup repository: could not create bud: could not back up bud.json for backup ed7e7f52: failed to backup target/etc/ces/bud.json: restic failed to backup /etc/ces/bud.json: Command restic [backup /etc/ces/bud.json --tag ed7ef52] returned error: : exit status 1
+                      </p>
                     </div>
                   </div>
                 </div>

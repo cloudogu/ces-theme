@@ -12,6 +12,11 @@
   color: $white;
 }
 
+/* Modals */
+.modal-title {
+  font-weight: 600;
+}
+
 /* Alerts */
 
 .alert-danger-inverse {
@@ -23,6 +28,19 @@
 }
 
 @include table-row-variant('inactive', $table-bg-inactive);
+
+.alert-success .alert-link {
+  color: change-color($brand-success, $saturation: 70%, $lightness: 25%);
+}
+.alert-warning .alert-link {
+  color: change-color($brand-warning, $saturation: 90%, $lightness: 30%);
+}
+.alert-danger .alert-link {
+  color: darken($brand-danger, 25%);
+}
+.alert-info .alert-link {
+  color: lighten($brand-info, 46.7%);
+}
 
 /* Typography */
 .large-font-size {
@@ -42,7 +60,78 @@
 /* Notes */
 .importantNote{
   h1, h2, h3, h4, h5, h6, p{
-    color: #333333;
+    color: $gray-dark;
   }
 
+}
+
+/* Forms */
+fieldset legend {
+  padding: 0 0 5px;
+  border-bottom: 1px solid $brand-primary-darker;
+
+}
+
+.input-group > .btn-default {
+
+  color: $brand-primary;
+  background-color: $white;
+  border-color: $brand-primary;
+
+}
+
+/* Pager */
+.pager {
+  .disabled {
+    > a,
+    > a:hover,
+    > a:focus,
+    > span {
+      border-color: $pager-disabled-color;
+    }
+  }
+}
+
+/* Modals */
+
+.modalWarning, .modalError {
+  .modal-content {
+    padding: 25px;
+
+    h3 {
+      color: $gray-dark;
+      font-weight: 600;
+      margin-bottom: 30px;
+
+      .glyphicon {
+        font-size: 90%;
+      }
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+}
+.modalWarning{
+  .modal-content {
+    border: 10px solid $brand-warning;
+    h3 {
+      .glyphicon {
+        color: $brand-warning;
+      }
+    }
+  }
+
+}
+.modalError {
+  .modal-content {
+
+    border: 10px solid $brand-danger;
+    h3 {
+      .glyphicon {
+        color: $brand-danger;
+      }
+    }
+  }
 }
