@@ -5831,9 +5831,8 @@ a.thumbnail-primary-bg.active {
 .table > thead > tr > td.info, .table > thead > tr > th.info, .table > thead > tr.info > td, .table > thead > tr.info > th, .table > tbody > tr > td.info, .table > tbody > tr > th.info, .table > tbody > tr.info > td, .table > tbody > tr.info > th, .table > tfoot > tr > td.info, .table > tfoot > tr > th.info, .table > tfoot > tr.info > td, .table > tfoot > tr.info > th {
   color: #fff; }
 
-/* Modals */
-.modal-title {
-  font-weight: 600; }
+td.inactive, .table > thead > tr > th.inactive, .table > thead > tr.inactive > td, .table > thead > tr.inactive > th, .table > tbody > tr > td.inactive, .table > tbody > tr > th.inactive, .table > tbody > tr.inactive > td, .table > tbody > tr.inactive > th, .table > tfoot > tr > td.inactive, .table > tfoot > tr > th.inactive, .table > tfoot > tr.inactive > td, .table > tfoot > tr.inactive > th {
+  color: #777777; }
 
 /* Alerts */
 .alert-danger-inverse {
@@ -5887,6 +5886,9 @@ a.thumbnail-primary-bg.active {
 .alert-info .alert-link {
   color: #5ac0ff; }
 
+.close {
+  opacity: 0.5; }
+
 /* Typography */
 .large-font-size {
   font-size: 20px; }
@@ -5921,6 +5923,9 @@ fieldset legend {
   border-color: #777777; }
 
 /* Modals */
+.modal-title {
+  font-weight: 600; }
+
 .modalWarning .modal-content, .modalError .modal-content {
   padding: 25px; }
   .modalWarning .modal-content h3, .modalError .modal-content h3 {

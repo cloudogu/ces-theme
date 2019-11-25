@@ -524,7 +524,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="page-header">
-              <h3 id="tables">Tables</h3>
+              <h3 id="tables">Standard tables</h3>
             </div>
 
             <div class="bs-component">
@@ -592,9 +592,197 @@
           </div>
         </div>
       </div>
+          <div class="row">
+            <div class="col-md-12 col-xs-12 ">
+              <div class="page-header">
+              <h3>
+                Functional tables
+              </h3>
+              </div>
+            </div>
+            <div class="col-md-12 col-xs-12 ">
+              <table class="table">
+                <thead>
+                <tr>
+                  <th scope="col">
+                    Backup-ID
+                  </th>
+                  <th scope="col">
+                    Startzeit
+                  </th>
+                  <th scope="col">
+                    Endzeit
+                  </th>
+                  <th scope="col">
+                    Backup-Typ
+                  </th>
+                  <th scope="col">
+                    Erfolgreich?
+                  </th>
+                  <th scope="col">
+                    Versions-ID
+                  </th>
+                </tr>
+                </thead>
+                <tbody>
 
-      <!-- Forms
-      ================================================== -->
+
+                <tr class="danger" style="color: white; font-weight: bold">
+                  <td>
+                    e4799313
+                  </td>
+                  <td>
+                    19.11.2019 12:47:51 CET
+                  </td>
+                  <td>
+
+                  </td>
+                  <td>
+                    all
+                  </td>
+                  <td>
+
+                    <span data-error="Hier ist etwas schiefgelaufen." title="Hier ist etwas schiefgelaufen." data-toggle="modal" data-target="#errorModal" class="glyphicon glyphicon-warning-sign clickable"></span>
+
+                  </td>
+                  <td>
+
+                    <span title="Das Backup basiert auf der aktuellen Version." class="glyphicon glyphicon-ok-circle tip"></span>
+
+                    &nbsp;
+                    <span title="si_RC_6759034051_00432" class="tip"> si_RC_6</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    c77080b3
+                  </td>
+                  <td>
+                    19.11.2019 12:35:55 CET
+                  </td>
+                  <td>
+                    19.11.2019 12:37:21 CET
+                  </td>
+                  <td>
+                    all
+                  </td>
+                  <td>
+
+                    <span class="text-success glyphicon glyphicon-ok-circle"></span>
+
+                  </td>
+                  <td>
+
+                    <span title="Das Backup basiert auf der aktuellen Version." class="text-success glyphicon glyphicon-ok-circle tip"></span>
+
+                    &nbsp;
+                    <span title="si_RC_6759034051_00432" class="tip"> si_RC_6</span>
+                  </td>
+                </tr>
+
+                <tr class="danger" style="color: white; font-weight: bold">
+                  <td>
+                    abe4430d
+                  </td>
+                  <td>
+                    19.11.2019 11:41:20 CET
+                  </td>
+                  <td>
+                    19.11.2019 11:42:45 CET
+                  </td>
+                  <td>
+                    all
+                  </td>
+                  <td>
+
+                    <span data-error="test test test" title="test test test" data-toggle="modal" data-target="#errorModal" class="glyphicon glyphicon-warning-sign clickable"></span>
+
+                  </td>
+                  <td>
+
+                    <span title="Das Backup basiert auf der aktuellen Version." class="glyphicon glyphicon-ok-circle tip"></span>
+
+                    &nbsp;
+                    <span title="si_RC_50927664958331_004356" class="tip"> si_RC_5</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    6747d44a
+                  </td>
+                  <td>
+                    19.11.2019 10:32:07 CET
+                  </td>
+                  <td>
+                    19.11.2019 10:33:31 CET
+                  </td>
+                  <td>
+                    all
+                  </td>
+                  <td>
+
+                    <span class="text-success glyphicon glyphicon-ok-circle"></span>
+
+                  </td>
+                  <td>
+
+                    <span title="Das Backup basiert auf der aktuellen Version." class="text-success glyphicon glyphicon-ok-circle tip"></span>
+
+                    &nbsp;
+                    si_RC_5
+                  </td>
+                </tr>
+
+                <tr class="inactive">
+                  <td>
+                    e512d99d
+                  </td>
+                  <td>
+                    19.11.2019 10:29:57 CET
+                  </td>
+                  <td>
+                    19.11.2019 10:31:19 CET
+                  </td>
+                  <td>
+                    all
+                  </td>
+                  <td>
+                    <span class="glyphicon glyphicon-ok-circle"></span>
+                  </td>
+                  <td>
+                    <span title="Das Backup basiert auf der aktuellen Version." class="glyphicon glyphicon-ok-circle tip"></span>
+                     si_RC_5
+                  </td>
+                </tr>
+
+                </tbody>
+
+              </table>
+            </div>
+
+            <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true" style="display: none;">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalLabel">
+                      <span class="text-warning glyphicon glyphicon-warning-sign" style="margin-right: 5px"></span>
+                      Bei der Durchführung des Backups traten Fehler auf
+                    </h5>
+                  </div>
+                  <div class="modal-body">Hier ist etwas schiefgelaufen.</div>
+                  <div class="modal-footer">
+                    <button type="button" id="cancelButton" class="btn btn-primary" data-dismiss="modal">
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Forms ================================================== -->
       <div class="bs-docs-section">
         <div class="row">
           <div class="col-lg-12">
@@ -1430,6 +1618,7 @@
                     <hr>
                 </div>
             </div>
+
           </div>
 
         </div>
