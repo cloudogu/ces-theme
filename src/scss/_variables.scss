@@ -10,12 +10,18 @@ $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 $white: #fff;
 
 $brand-primary: #23A3DD;
+$brand-primary-light:     lighten($brand-primary, 25%) !default; // #91d1ee
+$brand-primary-lighter:   lighten($brand-primary, 40%) !default; // #d4edf8
 $brand-primary-dark: #086690;
 $brand-primary-darker: #00426B;
 $brand-success: #B5CA00;
+$brand-success-light: #E6EDA8;
+$brand-success-dark: #5B6900;
 $brand-info: $brand-primary-darker;
-$brand-warning: #DD7800;
-$brand-danger: #E43B53;
+$brand-warning: #E49900;
+$brand-danger: #E73C55;
+$brand-danger-light: #FBE2E6;
+$brand-danger-dark: #c83449;
 
 $font-family-sans-serif: "Droid Sans", sans-serif;
 $font-family-serif: "Droid Serif", serif;
@@ -23,13 +29,14 @@ $font-family-monospace: 'Droid Sans Mono', Monaco, Consolas, "Courier New", mono
 
 $headings-color: $brand-primary-darker;
 
-$table-bg-accent: $brand-primary;
-$table-bg-hover: $brand-primary;
+$table-bg-accent: $brand-primary-lighter;
+$table-bg-inactive: $gray-lighter;
+$table-bg-hover: $brand-primary-lighter;
 $table-border-color: $white;
 
-$btn-default-color: $white;
-$btn-default-bg: $gray-light;
-$btn-default-border: darken($btn-default-bg, 5%);
+$btn-default-color: $gray-light;
+$btn-default-bg: $white;
+$btn-default-border: darken($btn-default-bg, 25%);
 $btn-primary-color: $white;
 $btn-success-color: $white;
 $btn-info-color: $white;
@@ -50,7 +57,7 @@ $input-group-addon-border-color: $brand-primary;
 
 $dropdown-border: $white;
 $dropdown-fallback-border: $white;
-$dropdown-divider-bg: $white;
+$dropdown-divider-bg: $gray-lighter;
 $dropdown-link-color: $brand-primary;
 $dropdown-link-hover-color: $brand-primary;
 $dropdown-link-hover-bg: $white;
@@ -76,9 +83,10 @@ $navbar-inverse-brand-color: $white;
 
 $pagination-border: $brand-primary;
 $pagination-hover-border: $brand-primary;
-$pagination-disabled-border: $brand-primary;
+$pagination-disabled-border: $gray-light;
 
 $pager-border: $brand-primary;
+$pager-disabled: $gray-light;
 
 $jumbotron-color: $brand-primary-dark;
 $jumbotron-heading-color: $brand-primary-dark;
@@ -102,9 +110,17 @@ $popover-title-bg: $brand-primary;
 $modal-content-border-color: $brand-primary;
 
 $alert-success-text: $white;
+$alert-success-border: $brand-success;
+$alert-success-inverse-text: $brand-success-dark;
+$alert-success-inverse-bg: $brand-success-light;
+
 $alert-info-text: $white;
 $alert-warning-text: $white;
+
 $alert-danger-text: $white;
+$alert-danger-border: $brand-danger;
+$alert-danger-inverse-text: $brand-danger-dark;
+$alert-danger-inverse-bg: $brand-danger-light;
 
 $list-group-link-color: $brand-primary;
 $list-group-link-heading-color: $brand-primary-darker;

@@ -7,6 +7,7 @@ Theme for CES WebApplications, based on Twitter Bootstrap.
 * http://cloudogu.github.io/ces-theme/
 
 ### Build
+## Linux
 * Install the following:
   - Install [git](https://git-scm.com)
   - Install [node.js](https://nodejs.org/en/)
@@ -15,11 +16,17 @@ Theme for CES WebApplications, based on Twitter Bootstrap.
 * Then install gulp and bower globally with `npm install -g gulp bower`
 * Clone the repository
 * Install local dependencies inside the repository:
+
+## Windows
+* Install the following:
+  - Install [Windows-Build-Tools](https://github.com/felixrieseberg/windows-build-tools)
 ```
 npm install
 bower install
 ```
 * Start development server with `gulp serve` and build with `gulp`
+
+> If gulp exits with a file not found error try deleting the `node_modules` directory and reinstall the dependencies with `npm install`.
 
 ### Usage
 * npm or bower
