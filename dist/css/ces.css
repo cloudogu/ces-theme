@@ -5956,3 +5956,83 @@ fieldset legend {
   border: 10px solid #E73C55; }
   .modalError .modal-content h4 .glyphicon {
     color: #E73C55; }
+
+/* Collapsible css */
+.collapsible-container section {
+  margin-bottom: 3rem; }
+
+input.toggle[type='checkbox'] {
+  display: none; }
+
+.dogu-list-toggler:checked ~ .dogu-list-container {
+  display: block; }
+
+.namespace-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem; }
+
+.namespace-header__label {
+  margin: 0;
+  cursor: pointer;
+  text-transform: capitalize; }
+
+.namespace-header__label::before {
+  content: '\e252';
+  font-family: 'Glyphicons Halflings';
+  line-height: 1;
+  font-weight: normal; }
+
+.namespace-header__line {
+  margin: 0 1rem;
+  flex-grow: 100; }
+
+.dogu-list-container {
+  display: none; }
+
+.dogu-list {
+  list-style-type: none;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  margin-bottom: 4rem;
+  padding: 0; }
+
+.dogu-list li {
+  break-inside: avoid; }
+
+.dogu-list__dogu {
+  margin: .5rem 0;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 2px; }
+
+.dogu-list__dogu:first-child {
+  margin-top: 0; }
+
+.dogu-label {
+  margin: 0;
+  font-weight: normal;
+  cursor: pointer;
+  display: flex;
+  align-items: center; }
+
+.dogu-label input[type="checkbox"] {
+  margin-right: 1rem; }
+
+.dogu-list__dogu__name {
+  flex-grow: 1000; }
+
+.dogu-selected {
+  background-color: #a8daf1;
+  border: 1px solid #a5d4e9; }
+
+.dogu-invalid {
+  background-color: #E43B53;
+  border: 1px solid #a5d4e9;
+  color: white; }
+
+.dogu-label .dogu-label__checkbox {
+  vertical-align: middle;
+  /* bootstrap: tag + attribute selector */
+  margin: 0; }
