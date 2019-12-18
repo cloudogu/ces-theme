@@ -27,6 +27,7 @@
     "gulp-uglify": "^2.0.0"
   },
   "dependencies": {
-    "font-awesome": "^4.6.3"
+    "font-awesome": "^4.6.3",
+    "sharp": "^0.23.4"
   }
 }
