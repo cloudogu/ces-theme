@@ -5930,6 +5930,11 @@ fieldset legend {
 .modal-title {
   font-weight: 600; }
 
+.namespace-failure {
+  color: #E43B53;
+  padding-left: 0.25rem;
+  margin-bottom: 0.5rem; }
+
 .modalWarning .modal-header, .modalWarning .modal-body, .modalWarning .modal-footer, .modalError .modal-header, .modalError .modal-body, .modalError .modal-footer {
   padding: 15px 0;
   border-bottom: none; }
