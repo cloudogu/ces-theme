@@ -6,8 +6,7 @@ Theme for CES WebApplications, based on Twitter Bootstrap.
 
 * http://cloudogu.github.io/ces-theme/
 
-### Build
-## Linux
+## Build
 * Install the following:
   - Install [git](https://git-scm.com)
   - Install [node.js](https://nodejs.org/en/)
@@ -26,13 +25,23 @@ bower install
 
 > If gulp exits with a file not found error try deleting the `node_modules` directory and reinstall the dependencies with `npm install`.
 
-### Usage
+## Usage
 * npm or bower
 ```
 "dependencies": {
   "ces-theme": "git://github.com/cloudogu/ces-theme.git"
 }
 ```
+
+## Deployment to Github Pages
+* Build (see above)
+   - This will get you the `dist` folder
+* Copy `dist` folder
+* Checkout `gh-pages` branch
+* Replace everything in it with the new content in the `dist` folder you copied earlier
+* Commit
+* You are done! Release to Github Pages is executed automatically
+
 
 ---
 ### What is Cloudogu?
