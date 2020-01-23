@@ -5,7 +5,7 @@
 @import "utils";
 
 /* Misc */
-.clickable:hover{
+.clickable:hover {
   cursor: pointer;
 }
 
@@ -15,6 +15,7 @@
 .table > thead > tr > td.info, .table > thead > tr > th.info, .table > thead > tr.info > td, .table > thead > tr.info > th, .table > tbody > tr > td.info, .table > tbody > tr > th.info, .table > tbody > tr.info > td, .table > tbody > tr.info > th, .table > tfoot > tr > td.info, .table > tfoot > tr > th.info, .table > tfoot > tr.info > td, .table > tfoot > tr.info > th {
   color: $white;
 }
+
 td.inactive, .table > thead > tr > th.inactive, .table > thead > tr.inactive > td, .table > thead > tr.inactive > th, .table > tbody > tr > td.inactive, .table > tbody > tr > th.inactive, .table > tbody > tr.inactive > td, .table > tbody > tr.inactive > th, .table > tfoot > tr > td.inactive, .table > tfoot > tr > th.inactive, .table > tfoot > tr.inactive > td, .table > tfoot > tr.inactive > th {
   color: $gray-light;
 }
@@ -23,22 +24,28 @@ td.inactive, .table > thead > tr > th.inactive, .table > thead > tr.inactive > t
 .alert-danger-inverse {
   @include alert-variant($alert-danger-inverse-bg, $alert-danger-border, $alert-danger-inverse-text);
 }
+
 .alert-success-inverse {
   @include alert-variant($alert-success-inverse-bg, $alert-success-border, $alert-success-inverse-text);
 }
+
 @include table-row-variant('inactive', $table-bg-inactive);
 .alert-success .alert-link {
   color: change-color($brand-success, $saturation: 70%, $lightness: 25%);
 }
+
 .alert-warning .alert-link {
   color: change-color($brand-warning, $saturation: 90%, $lightness: 30%);
 }
+
 .alert-danger .alert-link {
   color: darken($brand-danger, 25%);
 }
+
 .alert-info .alert-link {
   color: lighten($brand-info, 46.7%);
 }
+
 .close {
   opacity: 0.5;
 }
@@ -53,13 +60,14 @@ td.inactive, .table > thead > tr > th.inactive, .table > thead > tr.inactive > t
   padding-bottom: 5vh;
   margin-bottom: 0;
 }
+
 .stateText {
   line-height: 34px;
 }
 
 /* Notes */
-.importantNote{
-  h1, h2, h3, h4, h5, h6, p{
+.importantNote {
+  h1, h2, h3, h4, h5, h6, p {
     color: $gray-dark;
   }
 }
@@ -92,11 +100,19 @@ fieldset legend {
 .modal-title {
   font-weight: 600;
 }
+
+.namespace-failure {
+  color: #E43B53;
+  padding-left: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
 .modalWarning, .modalError {
   .modal-header, .modal-body, .modal-footer {
     padding: 15px 0;
     border-bottom: none;
   }
+
   .modal-content {
     padding: 25px;
 
@@ -115,24 +131,129 @@ fieldset legend {
     }
   }
 }
-.modalWarning{
+
+.modalWarning {
   .modal-content {
     border: 10px solid $brand-warning;
+
     h3 {
       color: $gray-dark;
+
       .glyphicon {
         color: $brand-warning;
       }
     }
   }
 }
+
 .modalError {
   .modal-content {
     border: 10px solid $brand-danger;
+
     h4 {
       .glyphicon {
         color: $brand-danger;
       }
     }
   }
+}
+
+/* Collapsible css */
+.collapsible-container section {
+  margin-bottom: 3rem;
+}
+
+input.toggle[type='checkbox'] {
+  display: none;
+}
+
+.dogu-list-toggler:checked ~ .dogu-list-container {
+  display: block;
+}
+
+.namespace-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.namespace-header__label {
+  margin: 0;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.namespace-header__label::before {
+  content: '\e252';
+  font-family: 'Glyphicons Halflings';
+  line-height: 1;
+  font-weight: normal;
+}
+
+.namespace-header__line {
+  margin: 0 1rem;
+  flex-grow: 100;
+}
+
+.dogu-list-container {
+  display: none;
+}
+
+.dogu-list {
+  list-style-type: none;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+
+  margin-bottom: 4rem;
+  padding: 0;
+}
+
+.dogu-list li {
+  break-inside: avoid;
+}
+
+.dogu-list__dogu {
+  margin: .5rem 0;
+  padding: 1rem;
+
+  border: 1px solid #ddd;
+  border-radius: 2px;
+}
+
+.dogu-list__dogu:first-child {
+  margin-top: 0;
+}
+
+.dogu-label {
+  margin: 0;
+  font-weight: normal;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dogu-label input[type="checkbox"] {
+  margin-right: 1rem;
+}
+
+.dogu-list__dogu__name {
+  flex-grow: 1000;
+}
+
+.dogu-selected {
+  background-color: #a8daf1;
+  border: 1px solid #a5d4e9;
+}
+
+.dogu-invalid {
+  background-color: #E43B53;
+  border: 1px solid #a5d4e9;
+  color: white;
+}
+
+.dogu-label .dogu-label__checkbox {
+  vertical-align: middle;
+  /* bootstrap: tag + attribute selector */
+  margin: 0;
 }
