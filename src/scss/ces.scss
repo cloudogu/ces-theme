@@ -288,6 +288,20 @@ input.toggle[type='checkbox'] {
   color: #00426b;
   background-color: transparent; }
 
+.navbar-inverse  .dropdown > .ng-binding {
+  max-height: 50px;
+}
+
+.navbar-inverse .navbar-toggle {
+  background-color: #23a3dd;
+  border-color: #23A3DD;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: #333;
+  border-color: #333;
+}
+
 /*=========================================================================
 * texts and link-colors
 * =========================================================================*/
