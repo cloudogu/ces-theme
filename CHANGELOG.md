@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 * update dependencies in package,json
 * changed color values of various css elements to enhance accessibility
+* recolor of navbar-inverse
 
 ### Added
 * new class for danger alert with brighter background color
