@@ -11,7 +11,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.11.1",
+    "browser-sync": "^2.26.14",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.1",
@@ -22,7 +22,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-responsive": "^2.2.0",
-    "gulp-sass": "^4.0.0",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^2.0.0"
   },
