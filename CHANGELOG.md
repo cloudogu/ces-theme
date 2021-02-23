@@ -7,13 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
-* update dependencies in package,json
-* changed color values of various css elements to enhance accessibility
-* recolor of navbar-inverse
+- update dependencies in package,json
+- changed color values of various css elements to enhance accessibility
+- recolor of navbar-inverse
 
 ### Added
-* new class for danger alert with brighter background color
-* new class for success alert with brighter background color
-* new class for displaying inactive table rows
-* several new classes to display a collapsiblesr    
-* examples for the new classes in `index.html`
+- new class for danger alert with brighter background color
+- new class for success alert with brighter background color
+- new class for displaying inactive table rows
+- several new classes to display a collapsiblesr    
+- examples for the new classes in `index.html`
