@@ -4,7 +4,7 @@ https://cloudogu.com
 
 Theme for CES WebApplications, based on Twitter Bootstrap.
 
-* http://cloudogu.github.io/ces-theme/
+* https://cloudogu.github.io/ces-theme/
 
 ## Build
 * Install the following:
