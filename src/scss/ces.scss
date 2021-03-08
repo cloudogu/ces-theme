@@ -302,6 +302,15 @@ input.toggle[type='checkbox'] {
   border-color: #333;
 }
 
+@media screen and (max-width: 767px) {
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+    color:#333;
+  }
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #00426b;
+  }
+}
+
 /*=========================================================================
 * texts and link-colors
 * =========================================================================*/
