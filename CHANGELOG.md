@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - update dependencies in package,json
 - changed color values of various css elements to enhance accessibility
 - recolor of navbar-inverse
-- include svg-logo in index
+- include two Cloudogu-logos in index as #16
 - change gulp-file for logos to process svg-images
 
 ### Added
