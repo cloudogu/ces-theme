@@ -1,7 +1,9 @@
 module.exports = function(gulp, $, info, paths){
   'use strict';
 
-  gulp.task('logo', function(){
+  const {src, dest} = require('gulp');
+
+  gulp.task('logo-png', function(){
   	var resizecfg = [{
   		width: 640,
   		rename: {
@@ -25,12 +27,18 @@ module.exports = function(gulp, $, info, paths){
   		}
   	}];
 
-  	return gulp.src(paths.src + '/images/logo/*')
+  	return src(paths.src + '/images/logo/*.png')
   						 .pipe($.responsive({
   							 '*.png': resizecfg
   						 }))
                          .pipe($.imagemin({verbose: true}))
-  						 .pipe(gulp.dest(paths.target + '/images/logo'));
+  						 .pipe(dest(paths.target + '/images/logo'));
   });
 
+  gulp.task('logo-svg', function(){
+	  return src(paths.src + '/images/logo/*.svg')
+		  .pipe($.imagemin({verbose: true}))
+		  .pipe(dest(paths.target + '/images/logo'));
+  });
+	gulp.task('logo', ['logo-svg', 'logo-png']);
 };
