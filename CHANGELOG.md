@@ -6,10 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.2.0] - 2021-04-06
 ### Changed
 - update dependencies in package,json
 - changed color values of various css elements to enhance accessibility
 - recolor of navbar-inverse
+- include two Cloudogu-logos in index as #16
+- change gulp-file for logos to process svg-images
 
 ### Added
 - new class for danger alert with brighter background color
@@ -17,3 +20,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - new class for displaying inactive table rows
 - several new classes to display a collapsiblesr    
 - examples for the new classes in `index.html`
+- single svg-logo
