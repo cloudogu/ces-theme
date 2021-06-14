@@ -262,6 +262,7 @@ input.toggle[type='checkbox'] {
 .navbar-inverse .navbar-nav > li > a {
   color: #333;
 }
+
 .navbar-inverse .navbar-brand {
   color: #333
 }
@@ -280,15 +281,22 @@ input.toggle[type='checkbox'] {
   background-color: #d4edf8;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-  color: #00426b;
-  background-color: transparent; }
+.navbar-inverse .navbar-nav {
+  li > a:hover, li > a:focus, li > .navbar-btn:focus, li > .navbar-btn:hover {
+    color: #fff;
+    background-color: #1b83b2;
+  }
+}
 
-.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
-  color: #00426b;
-  background-color: transparent; }
+.navbar-header {
+  .focus-hover-highlight.navbar-brand:hover, .focus-hover-highlight.navbar-brand:focus {
+    color: #fff;
+    background-color: #1b83b2;
+  }
+}
 
-.navbar-inverse  .dropdown > .ng-binding {
+
+.navbar-inverse .dropdown > .ng-binding {
   max-height: 50px;
 }
 
@@ -371,4 +379,5 @@ a:hover, a:focus {
   /* bootstrap: tag + attribute selector */
   margin: 0;
 }
+
 //=========================================================================
