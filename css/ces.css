@@ -6060,13 +6060,13 @@ input.toggle[type='checkbox'] {
   color: #333;
   background-color: #d4edf8; }
 
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-  color: #00426b;
-  background-color: transparent; }
+.navbar-inverse .navbar-nav li > a:hover, .navbar-inverse .navbar-nav li > a:focus, .navbar-inverse .navbar-nav li > .navbar-btn:focus, .navbar-inverse .navbar-nav li > .navbar-btn:hover {
+  color: #fff;
+  background-color: #1b83b2; }
 
-.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
-  color: #00426b;
-  background-color: transparent; }
+.navbar-header .focus-hover-highlight.navbar-brand:hover, .navbar-header .focus-hover-highlight.navbar-brand:focus {
+  color: #fff;
+  background-color: #1b83b2; }
 
 .navbar-inverse .dropdown > .ng-binding {
   max-height: 50px; }
