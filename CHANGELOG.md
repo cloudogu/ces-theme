@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.3.0] - 2021-06-30
+### Added
+- tooltip styling
+
 ## [v0.2.2] - 2021-16-06
 ### Changed
 - navbar-inverse hover behaviour (#18)
