@@ -6136,3 +6136,26 @@ a:hover, a:focus {
   vertical-align: middle;
   /* bootstrap: tag + attribute selector */
   margin: 0; }
+
+/*=========================================================================
+* styling of tooltips
+* =========================================================================*/
+.tooltip-inner {
+  background-color: #0e4259;
+  color: #fff; }
+
+.tooltip.top .tooltip-arrow {
+  border-top-color: #0e4259; }
+
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #0e4259; }
+
+.tooltip.left .tooltip-arrow {
+  border-left-color: #0e4259; }
+
+.tooltip.right .tooltip-arrow {
+  border-right-color: #0e4259; }
+
+.tooltip-inner > a {
+  color: #fff;
+  text-underline: #fff; }
