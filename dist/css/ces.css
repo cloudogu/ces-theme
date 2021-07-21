@@ -6132,6 +6132,15 @@ a:hover, a:focus {
   background-color: #00426b;
   border-color: #1f93c8; }
 
+/*override of ces.css line 2967 */
+.btn-warning {
+  color: #523600;
+  border-color: #A16B00; }
+
+.btn-warning.focus, .btn-warning:focus, .btn-warning:hover {
+  background-color: #A16B00;
+  color: #fff; }
+
 .dogu-label .dogu-label__checkbox {
   vertical-align: middle;
   /* bootstrap: tag + attribute selector */
