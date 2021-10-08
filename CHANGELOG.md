@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - styling of warning button (#21)
 - blue vector logo, new file with correct colors
 - date in footer of readme
+- load external javascript via CDN
 
 ## [v0.3.0] - 2021-06-30
 ### Added
