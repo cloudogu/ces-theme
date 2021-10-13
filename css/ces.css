@@ -1,4 +1,20 @@
 @charset "UTF-8";
+/* Droid Sans */
+@font-face {
+  font-family: "Droid Sans";
+  src: url("../fonts/DroidSans-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Droid Sans Bold";
+  src: url("../fonts/DroidSans-Bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+body {
+  font-family: "Droid Sans", Calibri, sans-serif !important; }
+
 /*!
  * Bootstrap v3.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 Twitter, Inc.
@@ -6131,6 +6147,15 @@ a:hover, a:focus {
   color: #fff;
   background-color: #00426b;
   border-color: #1f93c8; }
+
+/*override of ces.css line 2967 */
+.btn-warning {
+  color: #523600;
+  border-color: #A16B00; }
+
+.btn-warning.focus, .btn-warning:focus, .btn-warning:hover {
+  background-color: #A16B00;
+  color: #fff; }
 
 .dogu-label .dogu-label__checkbox {
   vertical-align: middle;
