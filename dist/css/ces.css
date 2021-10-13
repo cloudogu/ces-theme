@@ -1,4 +1,20 @@
 @charset "UTF-8";
+/* Droid Sans */
+@font-face {
+  font-family: "Droid Sans";
+  src: url("../fonts/DroidSans-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Droid Sans Bold";
+  src: url("../fonts/DroidSans-Bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+body {
+  font-family: "Droid Sans", Calibri, sans-serif !important; }
+
 /*!
  * Bootstrap v3.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 Twitter, Inc.
