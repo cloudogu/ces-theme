@@ -15,22 +15,35 @@
 
 <body>
 <div class="logo">
-    <img src="{{context}}images/logo/logo-white-320px.png">
+    <img src="{{context}}images/logo/logo-white-320px.png" alt="Cloudogu Logo">
 </div>
-    <div class="message">
+<div class="clouds-left">
+    <img src="{{context}}images/wolke01.svg">
+</div>
+<div class="clouds-right-one">
+    <img src="{{context}}images/wolke02.svg">
+</div>
+<div class="clouds-right-two">
+    <img src="{{context}}images/wolke03.svg">
+</div>
+    <div class="content-container">
         <div class="code">
-            Kein Zugriff
+            401
+        </div>
+        <div id="lottie">
+            <lottie-player src="{{context}}animations/401-lama.json" background="transparent" speed="1"
+                           autoplay></lottie-player>
         </div>
         <div class="description">
-            Ihr Administrator verwaltet die Rechte für diese Seite und kann Ihnen weiterhelfen.
+            <h1>Kein Zugriff</h1>
+            <p>
+                Ihr Administrator verwaltet die Rechte für diese Seite und kann Ihnen weiterhelfen.
+            </p>
         </div>
     </div>
 <!--    <div class="background">-->
 <!--        <img src="{{context}}images/clockwork.png">-->
 <!--    </div>-->
-<div id="lottie">
-    <lottie-player src="{{context}}animations/401-lama.json" background="transparent" speed="1"
-                   autoplay></lottie-player>
-</div>
+
 </body>
 </html>
