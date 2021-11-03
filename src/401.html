@@ -4,29 +4,33 @@
     <meta charset="utf-8">
     <title>401 - Unauthorized</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <link rel="stylesheet" href="{{context}}css/errors.css" media="screen">
     <!-- favicons -->
-    <link rel="icon" type="image/png" href="{{context}}images/favicon/favicon-64px.png" sizes="64x64" />
-    <link rel="icon" type="image/png" href="{{context}}images/favicon/favicon-32px.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="{{context}}images/favicon/favicon-16px.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="{{context}}images/favicon/favicon-64px.png" sizes="64x64"/>
+    <link rel="icon" type="image/png" href="{{context}}images/favicon/favicon-32px.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="{{context}}images/favicon/favicon-16px.png" sizes="16x16"/>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
 <body>
-    <div class="logo">
-        <img src="{{context}}images/logo/logo-white-320px.png">
-    </div>
+<div class="logo">
+    <img src="{{context}}images/logo/logo-white-320px.png">
+</div>
     <div class="message">
         <div class="code">
-            401
+            Kein Zugriff
         </div>
         <div class="description">
-            Unauthorized
+            Ihr Administrator verwaltet die Rechte für diese Seite und kann Ihnen weiterhelfen.
         </div>
     </div>
-    <div class="background">
-        <img src="{{context}}images/clockwork.png">
-    </div>
+<!--    <div class="background">-->
+<!--        <img src="{{context}}images/clockwork.png">-->
+<!--    </div>-->
+<div id="lottie">
+    <lottie-player src="{{context}}animations/401-lama.json" background="transparent" speed="1"
+                   autoplay></lottie-player>
+</div>
 </body>
-
 </html>

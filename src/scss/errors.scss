@@ -87,4 +87,19 @@ body, html {
     img {
         width: 70%;
     }
-} 
+}
+
+#lottie {
+    width: 20vw;
+    height: 70vh;
+    position: absolute;
+    left: 50vw;
+    margin-left: -10vw;
+    bottom: 50vh;
+    margin-bottom: -35vh;
+    display: block;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    text-align: center;
+    opacity: 1;
+}
