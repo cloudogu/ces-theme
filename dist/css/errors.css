@@ -1,5 +1,8 @@
 body, html {
-  background-color: #1b7daa; }
+  background-color: #1b7daa;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0; }
 
 .logo {
   z-index: 20;
@@ -56,27 +59,36 @@ body, html {
   .background img {
     width: 70%; }
 
+.image-wrapper {
+  position: relative; }
+
 .clouds-left {
+  filter: drop-shadow(2px 2px 7px rgba(0, 0, 0, 0.1));
   z-index: 100;
   position: absolute;
   left: -80px;
-  top: -30px; }
+  top: -30px;
+  overflow: hidden; }
   .clouds-left img {
     width: 225px; }
 
 .clouds-right-one {
+  filter: drop-shadow(2px 2px 7px rgba(0, 0, 0, 0.1));
   z-index: 85;
   position: absolute;
   right: -26px;
-  top: -6px; }
+  top: -6px;
+  overflow: hidden; }
   .clouds-right-one img {
     width: 150px; }
 
 .clouds-right-two {
+  filter: drop-shadow(2px 2px 7px rgba(0, 0, 0, 0.1));
   z-index: 84;
   position: absolute;
   right: -80px;
-  top: -30px; }
+  top: -30px;
+  overflow: hidden; }
   .clouds-right-two img {
     width: 160px; }
 
