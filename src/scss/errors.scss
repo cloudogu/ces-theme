@@ -13,20 +13,25 @@ $font-family: "Droid Sans", sans-serif;
     background-color: $c4;
 }
 
+@mixin cloudShadow{
+    filter: drop-shadow( 2px 2px 7px rgba(0, 0, 0, 0.1));
+}
+
 body, html {
-    height: 100%;
-    overflow: hidden;
-    @include gradient-background(#27a4de, #26a3dd, #229dd8, #1072B4);
+    background-color: #1b7daa;
+    overflow-x: hidden;
+    margin:0;
+    padding: 0;
 }
 
 .logo {
     z-index: 20;
     position: absolute;
-    right: 1.5vw;
-    top: 1.5vw;
+    right: 3vw;
+    top: 3vw;
 
     img {
-        width: 6.5vw;
+        width: 15vw;
     }
 }
 
@@ -66,7 +71,7 @@ body, html {
     display: inline-block;
     padding-left: 3vw;
     padding-right: 3vw;
-    padding-top: 0vw !important;
+    padding-top: 0 !important;
     padding-bottom: 3vw !important;
     border-radius: 0.5vw;
 
@@ -87,4 +92,164 @@ body, html {
     img {
         width: 70%;
     }
-} 
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.clouds-left {
+    @include cloudShadow;
+    z-index: 100;
+    position: absolute;
+    left: -80px;
+    top: -30px;
+    overflow: hidden;
+
+    img {
+        width: 225px;
+    }
+}
+
+.clouds-right-one {
+    @include cloudShadow;
+    z-index: 85;
+    position: absolute;
+    right: -26px;
+    top: -6px;
+    overflow: hidden;
+    img {
+        width: 150px;
+    }
+}
+
+.clouds-right-two {
+    @include cloudShadow;
+    z-index: 84;
+    position: absolute;
+    right: -80px;
+    top: -30px;
+    overflow: hidden;
+
+    img {
+        width: 160px;
+    }
+}
+
+#lottie {
+    height: 60vh;
+    display: block;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    text-align: center;
+    opacity: 1;
+}
+
+.content-container {
+    font-family: $font-family;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    div {
+        text-align: center;
+        color: $white;
+    }
+
+    .code {
+        font-size: 7.5rem;
+    }
+    .description h1 {
+        font-weight: normal;
+        margin-top: 0.5rem;
+    }
+    .description p{
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .logo {
+        right: 1.5vw;
+        top: 1.5vw;
+        img {
+           width: 6.5vw;
+        }
+    }
+
+    .content-container {
+        display: flex;
+        flex: 1 200px;
+        flex-direction: row-reverse;
+        align-content: center;
+        justify-content: center;
+        margin-top: 15vh;
+
+        .code {
+            text-align: start;
+        }
+        .description h1{
+            font-size: 4rem;
+        }
+    }
+    #lottie {
+        height: 70vh;
+        width: 20vw;
+    }
+    .code, .description {
+        width: 30vw;
+        display: flex;
+        margin-bottom: 10vh;
+    }
+    .code {
+        align-items: flex-end;
+    }
+    .description {
+        flex-direction: column;
+       justify-content: flex-end;
+        h1 {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (min-width: 920px) {
+    .content-container {
+        .code {
+            font-size: 10rem;
+        }
+    }
+
+}
+
+@media (min-width: 1400px) {
+    .clouds-left {
+        left: 15vw;
+        top: -250px;
+
+        img {
+            width: 400px;
+        }
+    }
+
+    .clouds-right-one {
+        z-index: 85;
+        position: absolute;
+        right: 27vw;
+        top: -150px;
+
+        img {
+            width: 240px;
+        }
+    }
+    .clouds-right-two {
+        z-index: 84;
+        position: absolute;
+        right: 22vw;
+        top: -120px;
+
+        img {
+            width: 220px;
+        }
+    }
+}

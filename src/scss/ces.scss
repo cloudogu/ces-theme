@@ -1,4 +1,5 @@
 @import "variables";
+@import "fonts";
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "thumbnail-primary";
@@ -369,9 +370,20 @@ a:hover, a:focus {
 
 /*overwrite of ces.css Z. 2862*/
 .btn-primary {
-  color: #fff;
+  color: $white;
   background-color: #00426b;
   border-color: #1f93c8;
+}
+
+/*override of ces.css line 2967 */
+.btn-warning {
+  color: $brand-warning-font;
+  border-color: $brand-warning-border;
+}
+
+.btn-warning.focus, .btn-warning:focus, .btn-warning:hover {
+  background-color: $brand-warning-border;
+  color: $white;
 }
 
 .dogu-label .dogu-label__checkbox {
