@@ -1,6 +1,6 @@
 {
   "name": "ces-theme",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Theme for CES WebApplications",
   "author": "Sebastian Sdorra <sebastian.sdorra@cloudogu.com>",
   "keywords": [
@@ -24,7 +24,8 @@
     "gulp-responsive": "^2.2.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^2.0.0"
+    "gulp-uglify": "^2.0.0",
+    "gulp-json-minify": "^1.2.2"
   },
   "dependencies": {
     "font-awesome": "^4.6.3",
