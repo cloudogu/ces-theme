@@ -13,6 +13,10 @@ $font-family: "Droid Sans", sans-serif;
     background-color: $c4;
 }
 
+@mixin cloudShadow{
+    filter: drop-shadow( 2px 2px 7px rgba(0, 0, 0, 0.1));
+}
+
 body, html {
     background-color: #1b7daa;
     overflow-x: hidden;
@@ -95,6 +99,7 @@ body, html {
 }
 
 .clouds-left {
+    @include cloudShadow;
     z-index: 100;
     position: absolute;
     left: -80px;
@@ -107,6 +112,7 @@ body, html {
 }
 
 .clouds-right-one {
+    @include cloudShadow;
     z-index: 85;
     position: absolute;
     right: -26px;
@@ -116,7 +122,9 @@ body, html {
         width: 150px;
     }
 }
+
 .clouds-right-two {
+    @include cloudShadow;
     z-index: 84;
     position: absolute;
     right: -80px;
