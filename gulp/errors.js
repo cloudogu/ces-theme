@@ -57,9 +57,13 @@ module.exports = function (gulp, $, info, paths) {
             .pipe($.imagemin({ verbose: true }))
             .pipe(gulp.dest(paths.target + '/errors/images/logo'));
 
-        gulp.src(paths.src + '/images/*.{jpg,png,gif}')
+        gulp.src(paths.src + '/images/*.{jpg,png,gif,svg}')
             .pipe($.imagemin({ verbose: true }))
             .pipe(gulp.dest(paths.target + '/errors/images'));
+
+        gulp.src(paths.src + '/animations/*.json')
+            .pipe($.imagemin({ verbose: true }))
+            .pipe(gulp.dest(paths.target + '/errors/animations'));
 
         var resizecfg = [{
             width: 64,
