@@ -15,6 +15,9 @@ $font-family: "Droid Sans", sans-serif;
 
 body, html {
     background-color: #1b7daa;
+    overflow-x: hidden;
+    margin:0;
+    padding: 0;
 }
 
 .logo {
@@ -87,11 +90,16 @@ body, html {
     }
 }
 
+.image-wrapper {
+    position: relative;
+}
+
 .clouds-left {
     z-index: 100;
     position: absolute;
     left: -80px;
     top: -30px;
+    overflow: hidden;
 
     img {
         width: 225px;
@@ -103,7 +111,7 @@ body, html {
     position: absolute;
     right: -26px;
     top: -6px;
-
+    overflow: hidden;
     img {
         width: 150px;
     }
@@ -113,6 +121,7 @@ body, html {
     position: absolute;
     right: -80px;
     top: -30px;
+    overflow: hidden;
 
     img {
         width: 160px;
