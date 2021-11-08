@@ -1,7 +1,7 @@
 module.exports = function(gulp, $, info, paths){
   'use strict';
 
-  gulp.task('serve', ['scss', 'scripts', 'logo', 'favicon', 'images', "lottie-animations-json", 'html'], function(){
+  gulp.task('serve', ['scss', 'scripts', 'logo', 'favicon', 'images', "lottie-animations", 'html'], function(){
     var browserSync = require('browser-sync').create();
 
     var files = [
