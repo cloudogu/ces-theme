@@ -5,9 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [v0.5.2] - 2021-11-08
+### Added
+- Automatic delivery of the lottie player script for the lottie animations (#27)
+
 ## [v0.5.1] - 2021-11-04
 ### Fixed
-- Gulp building process for the new assets of the unauthorized page
+- Gulp building process for the new assets of the unauthorized page (#27)
 
 ## [v0.5.0] - 2021-11-04
 ### Added
