@@ -65,6 +65,10 @@ module.exports = function (gulp, $, info, paths) {
             .pipe($.imagemin({ verbose: true }))
             .pipe(gulp.dest(paths.target + '/errors/animations'));
 
+        gulp.src(paths.src + '/animations/*.js')
+            .pipe($.imagemin({ verbose: true }))
+            .pipe(gulp.dest(paths.target + '/errors/animations'));
+
         var resizecfg = [{
             width: 64,
             rename: {
