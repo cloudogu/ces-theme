@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.5.4] - 2021-12-10
+### Fixed
+- Fix state information box height to be absolute instead of viewport relative (#31)
+
 ## [v0.5.3] - 2021-11-11
 ### Changed
 - Translated the new unauthorized page into english (#29)
