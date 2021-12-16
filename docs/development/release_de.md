@@ -21,3 +21,15 @@
 1. `git push origin master`
 1. `git push origin develop --tags`
 1. Release in Github bearbeiten
+
+# Update Github-Pages 
+- Adresse: https://cloudogu.github.io/ces-theme/
+- Kopiere den Inhalt des `dist` Ordners
+- Checkout `gh-pages` Branch
+- Aktualisieren mit dem kopierten Inhalt
+- Commit and Push die Änderungen
+- Kontrolliere den Deployment-Status und die oben angegebene Adresse: https://github.com/cloudogu/ces-theme/deployments/activity_log?environment=github-pages 
+
+# Release Webjar (only used for CAS6)
+  
+  siehe [Release WebJar Documentation](Release_WebJar_de.md) 
