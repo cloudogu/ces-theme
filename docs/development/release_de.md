@@ -1,6 +1,6 @@
 # Release des CES-Themes
 
-1. Letzte Version in im Changelog checken
+1. Letzte Version im Changelog checken
 1. Neue NEWVERSION anhand von [semantic versioning](https://semver.org/) ausdenken
 1. `git checkout develop && git pull`
 1. `git flow release start NEWVERSION`
