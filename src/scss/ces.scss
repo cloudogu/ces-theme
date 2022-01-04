@@ -12,6 +12,7 @@
 
 /* Tables */
 .table > thead > tr > td.warning, .table > thead > tr > th.warning, .table > thead > tr.warning > td, .table > thead > tr.warning > th, .table > tbody > tr > td.warning, .table > tbody > tr > th.warning, .table > tbody > tr.warning > td, .table > tbody > tr.warning > th, .table > tfoot > tr > td.warning, .table > tfoot > tr > th.warning, .table > tfoot > tr.warning > td, .table > tfoot > tr.warning > th,
+.table > thead > tr > td.success, .table > thead > tr > th.success, .table > thead > tr.success > td, .table > thead > tr.success > th, .table > tbody > tr > td.success, .table > tbody > tr > th.success, .table > tbody > tr.success > td, .table > tbody > tr.success > th, .table > tfoot > tr > td.success, .table > tfoot > tr > th.success, .table > tfoot > tr.success > td, .table > tfoot > tr.success > th,
 .table > thead > tr > td.danger, .table > thead > tr > th.danger, .table > thead > tr.danger > td, .table > thead > tr.danger > th, .table > tbody > tr > td.danger, .table > tbody > tr > th.danger, .table > tbody > tr.danger > td, .table > tbody > tr.danger > th, .table > tfoot > tr > td.danger, .table > tfoot > tr > th.danger, .table > tfoot > tr.danger > td, .table > tfoot > tr.danger > th,
 .table > thead > tr > td.info, .table > thead > tr > th.info, .table > thead > tr.info > td, .table > thead > tr.info > th, .table > tbody > tr > td.info, .table > tbody > tr > th.info, .table > tbody > tr.info > td, .table > tbody > tr.info > th, .table > tfoot > tr > td.info, .table > tfoot > tr > th.info, .table > tfoot > tr.info > td, .table > tfoot > tr.info > th {
   color: $white;
@@ -32,7 +33,7 @@ td.inactive, .table > thead > tr > th.inactive, .table > thead > tr.inactive > t
 
 @include table-row-variant('inactive', $table-bg-inactive);
 .alert-success .alert-link {
-  color: change-color($brand-success, $saturation: 70%, $lightness: 25%);
+  color: $brand-success-light;
 }
 
 .alert-warning .alert-link {
@@ -40,7 +41,7 @@ td.inactive, .table > thead > tr > th.inactive, .table > thead > tr.inactive > t
 }
 
 .alert-danger .alert-link {
-  color: darken($brand-danger, 25%);
+  color: $gray-dark;
 }
 
 .alert-info .alert-link {
@@ -83,6 +84,10 @@ fieldset legend {
   color: $brand-primary;
   background-color: $white;
   border-color: $brand-primary;
+}
+
+.input-group-addon {
+  color: #1b7daa;
 }
 
 /* Pager */
@@ -266,6 +271,15 @@ input.toggle[type='checkbox'] {
 
 .navbar-inverse .navbar-brand {
   color: #333
+}
+
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+  color: #00426b;
+  background-color: transparent;
+}
+
+.navbar-brand img {
+  height: 18px;
 }
 
 .navbar-inverse {
