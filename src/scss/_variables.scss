@@ -14,12 +14,14 @@ $brand-primary-light:     lighten($brand-primary, 25%) !default; // #91d1ee
 $brand-primary-lighter:   lighten($brand-primary, 40%) !default; // #d4edf8
 $brand-primary-dark: #086690;
 $brand-primary-darker: #00426B;
-$brand-success: #B5CA00;
+//$brand-success: #B5CA00;
+$brand-success: #6F7915;
 $brand-success-light: #E6EDA8;
 $brand-success-dark: #5B6900;
 $brand-info: $brand-primary-darker;
 $brand-warning: #E49900;
-$brand-danger: #E73C55;
+//$brand-danger: #E73C55;
+$brand-danger: #D61A36;
 $brand-danger-light: #FBE2E6;
 $brand-danger-dark: #c83449;
 $brand-warning-font: #523600;
