@@ -47,3 +47,6 @@ jspm_packages
 # Intellij
 .idea/*
 *.iml
+
+# Build results
+/dist/
