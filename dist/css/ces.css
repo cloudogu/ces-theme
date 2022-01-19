@@ -6052,6 +6052,9 @@ input.toggle[type='checkbox'] {
   background-color: #a8daf1;
   border: 1px solid #a5d4e9; }
 
+.dogu-disabled {
+  background-color: #eeeeee; }
+
 .dogu-invalid {
   background-color: #E43B53;
   border: 1px solid #a5d4e9;
