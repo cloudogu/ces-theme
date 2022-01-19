@@ -7,7 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Add css class for disabling elements in dogu list (#35)
-- Add dist folder to gitignore
 
 ## [v0.6.0] - 2022-01-05
 ### Changed
