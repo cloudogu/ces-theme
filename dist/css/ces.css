@@ -2821,7 +2821,7 @@ select[multiple].input-lg,
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .btn:hover, .btn:focus, .btn.focus {
-    color: #777777;
+    color: #333333;
     text-decoration: none; }
   .btn:active, .btn.active {
     background-image: none;
@@ -2841,39 +2841,39 @@ fieldset[disabled] a.btn {
   pointer-events: none; }
 
 .btn-default {
-  color: #777777;
+  color: #333333;
   background-color: #fff;
-  border-color: #bfbfbf; }
+  border-color: #4d4d4d; }
   .btn-default:focus, .btn-default.focus {
-    color: #777777;
+    color: #333333;
     background-color: #e6e6e6;
-    border-color: gray; }
+    border-color: #0d0d0d; }
   .btn-default:hover {
-    color: #777777;
+    color: #333333;
     background-color: #e6e6e6;
-    border-color: #a1a1a1; }
+    border-color: #2e2e2e; }
   .btn-default:active, .btn-default.active,
   .open > .btn-default.dropdown-toggle {
-    color: #777777;
+    color: #333333;
     background-color: #e6e6e6;
     background-image: none;
-    border-color: #a1a1a1; }
+    border-color: #2e2e2e; }
     .btn-default:active:hover, .btn-default:active:focus, .btn-default:active.focus, .btn-default.active:hover, .btn-default.active:focus, .btn-default.active.focus,
     .open > .btn-default.dropdown-toggle:hover,
     .open > .btn-default.dropdown-toggle:focus,
     .open > .btn-default.dropdown-toggle.focus {
-      color: #777777;
+      color: #333333;
       background-color: #d4d4d4;
-      border-color: gray; }
+      border-color: #0d0d0d; }
   .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus,
   fieldset[disabled] .btn-default:hover,
   fieldset[disabled] .btn-default:focus,
   fieldset[disabled] .btn-default.focus {
     background-color: #fff;
-    border-color: #bfbfbf; }
+    border-color: #4d4d4d; }
   .btn-default .badge {
     color: #fff;
-    background-color: #777777; }
+    background-color: #333333; }
 
 .btn-primary {
   color: #fff;
