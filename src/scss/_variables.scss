@@ -38,9 +38,9 @@ $table-bg-inactive: $gray-lighter;
 $table-bg-hover: $brand-primary-lighter;
 $table-border-color: $white;
 
-$btn-default-color: $gray-light;
+$btn-default-color: $gray-dark;
 $btn-default-bg: $white;
-$btn-default-border: darken($btn-default-bg, 25%);
+$btn-default-border: lighten($gray-dark, 10%);
 $btn-primary-color: $white;
 $btn-success-color: $white;
 $btn-info-color: $white;
