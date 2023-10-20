@@ -10,24 +10,24 @@ Theme for CES WebApplications, based on Twitter Bootstrap.
 * Install the following:
   - Install [git](https://git-scm.com)
   - Install [Node Version Manager](https://github.com/nvm-sh/nvm)
-* You need to use Node 8
-  * `nvm install 8 && nvm use 8`
+* You need to use Node 10
+  * `nvm install 10 && nvm use 10`
 * Then install gulp and bower globally with `npm install -g gulp bower`
 * Clone the repository
 * Install local dependencies inside the repository, if necessary:
   - On Windows install the following: [Windows-Build-Tools](https://github.com/felixrieseberg/windows-build-tools)
 * Build
 ```
-npm install
-bower install
+make
 ```
-* Start development server with `gulp serve` 
-* Build with `gulp`
+* Start development server with `make serve` 
+* Build with `make`
 
 ### Troubleshooting
 > * If `gulp` exits with a file not found error try deleting the `node_modules` directory and reinstall the dependencies with `npm install`.
 > * If `gulp serve` does not run correctly, and the error is in one of the included node-modules, then a rebuild of the package in question may help
     (`npm rebuild <node-module>`).
+>   * possible candidates are node-sass and sharp
 > 
 ## Usage
 * npm or bower
