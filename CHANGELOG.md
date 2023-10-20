@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.7.2] - 2022-10-20
+### Changed
+- Move `sharp` to dev dependencies (#39)
+- Pin `bootstrap-sass` to `3.4.1` because of build issues
+  - https://github.com/twbs/bootstrap-sass/issues/1228#issuecomment-1069310370
+
 ## [v0.7.1] - 2022-09-19
 ### Fixed
 - Fix accesibility of btn-default (#37)
