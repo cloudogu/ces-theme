@@ -10,8 +10,8 @@ Theme for CES WebApplications, based on Twitter Bootstrap.
 * Install the following:
   - Install [git](https://git-scm.com)
   - Install [Node Version Manager](https://github.com/nvm-sh/nvm)
-* You need to use Node 8
-  * `nvm install 8 && nvm use 8`
+* You need to use Node 9
+  * `nvm install 9 && nvm use 9`
 * Then install gulp and bower globally with `npm install -g gulp bower`
 * Clone the repository
 * Install local dependencies inside the repository, if necessary:
