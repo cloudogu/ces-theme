@@ -10,6 +10,9 @@
     "css"
   ],
   "license": "AGPL-3.0-only",
+  "resolutions": {
+    "form-data": "2.5.4"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "del": "^2.2.0",
@@ -29,6 +32,7 @@
     "sharp": "^0.23.4"
   },
   "dependencies": {
-    "font-awesome": "^4.6.3"
+    "font-awesome": "^4.6.3",
+    "form-data": "2.5.4"
   }
 }
