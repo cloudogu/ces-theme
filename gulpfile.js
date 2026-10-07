@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass')(require('sass'));
+var uglify = require('gulp-uglify');
 var postcss = require('gulp-postcss');
 var cssnano = require('cssnano');
 var ghpages = require('gh-pages');
@@ -28,7 +29,9 @@ var $ = {
     // bootstrap-sass 3 depends on @import and global variable overrides; quietDeps would also hide our own partials
     return sass({ loadPaths: [paths.vendor], silenceDeprecations: ['import'], verbose: true, logger: require('./gulp/lib/sass-logger') });
   },
-  uglify: require('gulp-uglify')
+  uglify: function(){
+    return uglify({ module: false });
+  }
 };
 
 // gulp.parallel/gulp.series resolve task names eagerly, so composite tasks must be registered last
@@ -41,6 +44,6 @@ tasks.forEach(function(file){
 });
 
 //* Update [github pages](http://cloudogu.github.io/ces-theme/) with `gulp deploy`
-gulp.task('deploy', function () {
-  return ghpages.publish(paths.target);
+gulp.task('deploy', function (done) {
+  ghpages.publish(paths.target, done);
 });
