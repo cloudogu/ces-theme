@@ -1,15 +1,17 @@
 import { createRequire } from 'module';
 import fs from 'fs';
 import gulp from 'gulp';
-import loadPlugins from 'gulp-load-plugins';
 import ghpages from 'gh-pages';
 
 const require = createRequire(import.meta.url);
 const info = require('./package.json');
-const $ = loadPlugins({
-  config: info,
-  requireFn: require
-});
+const $ = {
+  jsonMinify: require('gulp-json-minify'),
+  postcss: require('gulp-postcss'),
+  rename: require('gulp-rename'),
+  replace: require('gulp-replace'),
+  uglify: require('gulp-uglify')
+};
 
 const paths = {
 	src: './src',
