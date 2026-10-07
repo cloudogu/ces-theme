@@ -1,36 +1,20 @@
 'use strict';
 
-var path = require('path');
-var Transform = require('stream').Transform;
 var sharp = require('sharp');
+var transform = require('./transform');
 
-module.exports = function responsive(configs){
-  configs = [].concat(configs);
-  return new Transform({
-    objectMode: true,
-    transform: function(file, encoding, callback){
-      var stream = this;
-      if (file.isNull()) {
-        return callback(null, file);
-      }
-
-      Promise.all(configs.map(function(config){
-        return sharp(file.contents)
-          .resize(config.width, null, { kernel: 'lanczos3', withoutEnlargement: true })
-          .toBuffer()
-          .then(function(buffer){
-            var resized = file.clone({ contents: false });
-            var suffix = (config.rename && config.rename.suffix) || '';
-            resized.path = path.join(file.dirname, file.stem + suffix + file.extname);
-            resized.contents = buffer;
-            return resized;
-          });
-      })).then(function(resizedFiles){
-        resizedFiles.forEach(function(resized){
-          stream.push(resized);
+module.exports = function responsive(widths){
+  return transform(function(file){
+    return Promise.all(widths.map(function(width){
+      return sharp(file.contents)
+        .resize({ width: width, withoutEnlargement: true })
+        .toBuffer()
+        .then(function(contents){
+          var resized = file.clone({ contents: false });
+          resized.stem += '-' + width + 'px';
+          resized.contents = contents;
+          return resized;
         });
-        callback();
-      }, callback);
-    }
+    }));
   });
 };
