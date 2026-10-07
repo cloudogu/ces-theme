@@ -10,12 +10,8 @@ Theme for CES WebApplications, based on Twitter Bootstrap.
 * Clone the repository
 * You need to use Node 24 (at least Node 22.22.3 or 24.15.0)
   * `nvm install && nvm use` inside the repository (picks up the version from `.nvmrc`)
-* Build
-```
-make
-```
-* Start development server with `make serve` 
-* Build with `make`
+* Build with `make` (output goes to `dist/`)
+* Start the development server with `make serve`
 
 ### Troubleshooting
 > * If `gulp` exits with a file not found error try deleting the `node_modules` directory and reinstall the dependencies with `npm install`.
