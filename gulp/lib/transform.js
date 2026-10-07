@@ -15,6 +15,7 @@ module.exports = function transform(mapFile){
         [].concat(files).forEach(function(mapped){
           stream.push(mapped);
         });
+      }).then(function(){
         callback();
       }, callback);
     }

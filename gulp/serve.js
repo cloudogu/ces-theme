@@ -1,7 +1,7 @@
 module.exports = function(gulp, $, info, paths){
   'use strict';
 
-  gulp.task('serve', gulp.series(gulp.parallel('scss', 'scripts', 'logo', 'favicon', 'images', 'lottie-animations', 'html'), function(){
+  gulp.task('serve', gulp.series(gulp.parallel('scss', 'scripts', 'logo', 'favicon', 'images', 'lottie-animations', 'html'), function(done){
     var browserSync = require('browser-sync').create();
 
     var files = [
@@ -19,6 +19,7 @@ module.exports = function(gulp, $, info, paths){
 
   	gulp.watch([paths.src + '/scss/*.scss'], gulp.series('scss'));
     gulp.watch([paths.src + '/*.html'], gulp.series('html'));
+    done();
   }));
 
 };
