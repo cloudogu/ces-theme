@@ -7,9 +7,9 @@ Theme for CES WebApplications, based on Twitter Bootstrap.
 * Install the following:
   - Install [git](https://git-scm.com)
   - Install [Node Version Manager](https://github.com/nvm-sh/nvm)
-* You need to use Node 24 (at least Node 22.22.3 or 24.15.0)
-  * `nvm install && nvm use` (picks up the version from `.nvmrc`)
 * Clone the repository
+* You need to use Node 24 (at least Node 22.22.3 or 24.15.0)
+  * `nvm install && nvm use` inside the repository (picks up the version from `.nvmrc`)
 * Build
 ```
 make
@@ -21,7 +21,6 @@ make
 > * If `gulp` exits with a file not found error try deleting the `node_modules` directory and reinstall the dependencies with `npm install`.
 > * If `gulp serve` does not run correctly, and the error is in one of the included node-modules, then a rebuild of the package in question may help
     (`npm rebuild <node-module>`).
->   * possible candidate is sharp
 > 
 ## Usage
 * npm or bower
