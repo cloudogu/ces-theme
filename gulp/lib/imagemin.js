@@ -1,13 +1,13 @@
 'use strict';
 
-var sharp = require('sharp');
+var losslessCompressPng = require('@napi-rs/image').losslessCompressPng;
 var svgo = require('svgo');
 var transform = require('./transform');
 
 function optimize(file){
   switch (file.extname.toLowerCase()) {
     case '.png':
-      return sharp(file.contents).png({ compressionLevel: 9, adaptiveFiltering: true }).toBuffer();
+      return losslessCompressPng(file.contents);
     case '.svg':
       return Buffer.from(svgo.optimize(file.contents.toString(), { path: file.path }).data);
     default:
