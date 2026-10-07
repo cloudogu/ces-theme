@@ -25,8 +25,8 @@ var $ = {
   replace: require('gulp-replace'),
   responsive: require('./gulp/lib/responsive'),
   sass: function(){
-    // bootstrap-sass 3 depends on @import and global variable overrides
-    return sass({ loadPaths: [paths.vendor], quietDeps: true, silenceDeprecations: ['import'] });
+    // bootstrap-sass 3 depends on @import and global variable overrides; quietDeps would also hide our own partials
+    return sass({ loadPaths: [paths.vendor], silenceDeprecations: ['import'], verbose: true, logger: require('./gulp/lib/sass-logger') });
   },
   uglify: require('gulp-uglify')
 };
