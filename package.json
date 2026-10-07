@@ -16,7 +16,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "del": "^2.2.0",
-    "gulp": "^3.9.1",
+    "gulp": "^5.0.1",
     "gulp-cssnano": "^2.1.1",
     "gulp-gh-pages": "^0.5.4",
     "gulp-htmlmin": "^2.0.0",

@@ -12,5 +12,5 @@ module.exports = function(gulp, $, info, paths){
             .pipe(gulp.dest(paths.target + '/animations'));
     });
 
-    gulp.task('lottie-animations', ['lottie-animations-json', 'lottie-animations-scripts']);
+    gulp.task('lottie-animations', gulp.parallel('lottie-animations-json', 'lottie-animations-scripts'));
 };

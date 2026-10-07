@@ -2,7 +2,7 @@ module.exports = function(gulp, $, info, paths){
   'use strict';
 
   gulp.task('favicon-ico', function(){
-  	return gulp.src(paths.src + '/favicon.ico')
+  	return gulp.src(paths.src + '/favicon.ico', {encoding: false})
   						 .pipe(gulp.dest(paths.target + '/images/favicon'));
   });
 
@@ -24,7 +24,7 @@ module.exports = function(gulp, $, info, paths){
   		}
   	}];
 
-  	return gulp.src(paths.src + '/images/favicon/*')
+  	return gulp.src(paths.src + '/images/favicon/*', {encoding: false})
   						 .pipe($.responsive({
   							 '*.png': resizecfg
   						 }))
@@ -32,5 +32,5 @@ module.exports = function(gulp, $, info, paths){
   						 .pipe(gulp.dest(paths.target +'/images/favicon'));
   });
 
-  gulp.task('favicon', ['favicon-ico', 'favicon-png']);
+  gulp.task('favicon', gulp.parallel('favicon-ico', 'favicon-png'));
 };

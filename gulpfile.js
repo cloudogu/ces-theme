@@ -11,7 +11,11 @@ var paths = {
 	vendor: './bower_components'
 };
 
-var tasks = require('fs').readdirSync('./gulp');
+// gulp.parallel/gulp.series resolve task names eagerly, so composite tasks must be registered last
+var compositeTasks = ['default.js', 'serve.js'];
+var tasks = require('fs').readdirSync('./gulp').filter(function(file){
+  return compositeTasks.indexOf(file) === -1;
+}).concat(compositeTasks);
 tasks.forEach(function(file){
   require('./gulp/' + file)(gulp, $, info, paths);
 });

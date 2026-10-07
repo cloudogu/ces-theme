@@ -1,9 +1,8 @@
 module.exports = function (gulp, $, info, paths) {
     'use strict';
 
-    gulp.task('errors', function () {
-
-        gulp.src(paths.src + '/{4,5}*.html')
+    gulp.task('errors-html', function () {
+        return gulp.src(paths.src + '/{4,5}*.html')
             .pipe($.replace('{{context}}', '/errors/'))
             .pipe($.htmlmin({
                 minifyJS: true,
@@ -12,28 +11,36 @@ module.exports = function (gulp, $, info, paths) {
                 collapseWhitespace: true
             }))
             .pipe(gulp.dest(paths.target + '/errors'));
+    });
 
-        gulp.src(paths.src + '/scss/errors.scss')
+    gulp.task('errors-css', function () {
+        return gulp.src(paths.src + '/scss/errors.scss')
             .pipe($.sourcemaps.init())
             .pipe($.sass())
             .pipe($.cssnano({ autoprefixer: false }))
             .pipe($.sourcemaps.write('.'))
             .pipe(gulp.dest(paths.target + '/errors/css'));
+    });
 
-        gulp.src(paths.src + '/scss/ces.scss')
+    gulp.task('errors-ces-css', function () {
+        return gulp.src(paths.src + '/scss/ces.scss')
             .pipe($.sourcemaps.init())
             .pipe($.sass())
             .pipe($.cssnano())
             .pipe($.sourcemaps.write('.'))
             .pipe(gulp.dest(paths.target + '/errors/css'));
+    });
 
-        gulp.src(paths.src + '/scripts/{4,5}*.js')
+    gulp.task('errors-scripts', function () {
+        return gulp.src(paths.src + '/scripts/{4,5}*.js')
             .pipe($.sourcemaps.init())
             .pipe($.uglify())
             .pipe($.sourcemaps.write('.'))
             .pipe(gulp.dest(paths.target + '/errors/scripts'));
+    });
 
-        gulp.src(paths.src + '/images/logo/blib-white.png')
+    gulp.task('errors-logo-blib', function () {
+        return gulp.src(paths.src + '/images/logo/blib-white.png', { encoding: false })
             .pipe($.responsive({
                 '*.png': {
                     width: 320,
@@ -44,8 +51,10 @@ module.exports = function (gulp, $, info, paths) {
             }))
             .pipe($.imagemin({ verbose: true }))
             .pipe(gulp.dest(paths.target + '/errors/images/logo'));
+    });
 
-        gulp.src(paths.src + '/images/logo/logo-white.png')
+    gulp.task('errors-logo', function () {
+        return gulp.src(paths.src + '/images/logo/logo-white.png', { encoding: false })
             .pipe($.responsive({
                 '*.png': {
                     width: 320,
@@ -56,19 +65,32 @@ module.exports = function (gulp, $, info, paths) {
             }))
             .pipe($.imagemin({ verbose: true }))
             .pipe(gulp.dest(paths.target + '/errors/images/logo'));
+    });
 
-        gulp.src(paths.src + '/images/*.{jpg,png,gif,svg}')
+    gulp.task('errors-images', function () {
+        return gulp.src(paths.src + '/images/*.{jpg,png,gif,svg}', { encoding: false })
             .pipe($.imagemin({ verbose: true }))
             .pipe(gulp.dest(paths.target + '/errors/images'));
+    });
 
-        gulp.src(paths.src + '/animations/*.json')
+    gulp.task('errors-animations-json', function () {
+        return gulp.src(paths.src + '/animations/*.json')
             .pipe($.imagemin({ verbose: true }))
             .pipe(gulp.dest(paths.target + '/errors/animations'));
+    });
 
-        gulp.src(paths.src + '/animations/*.js')
+    gulp.task('errors-animations-scripts', function () {
+        return gulp.src(paths.src + '/animations/*.js')
             .pipe($.imagemin({ verbose: true }))
             .pipe(gulp.dest(paths.target + '/errors/animations'));
+    });
 
+    gulp.task('errors-favicon-ico', function () {
+        return gulp.src(paths.src + '/favicon.ico', { encoding: false })
+            .pipe(gulp.dest(paths.target + '/errors/images/favicon'));
+    });
+
+    gulp.task('errors-favicon-png', function () {
         var resizecfg = [{
             width: 64,
             rename: {
@@ -86,15 +108,25 @@ module.exports = function (gulp, $, info, paths) {
                 }
             }];
 
-        gulp.src(paths.src + '/favicon.ico')
-            .pipe(gulp.dest(paths.target + '/errors/images/favicon'));
-
-        gulp.src(paths.src + '/images/favicon/*')
+        return gulp.src(paths.src + '/images/favicon/*', { encoding: false })
             .pipe($.responsive({
                 '*.png': resizecfg
             }))
             .pipe($.imagemin({ verbose: true }))
             .pipe(gulp.dest(paths.target + '/errors/images/favicon'));
-
     });
+
+    gulp.task('errors', gulp.parallel(
+        'errors-html',
+        'errors-css',
+        'errors-ces-css',
+        'errors-scripts',
+        'errors-logo-blib',
+        'errors-logo',
+        'errors-images',
+        'errors-animations-json',
+        'errors-animations-scripts',
+        'errors-favicon-ico',
+        'errors-favicon-png'
+    ));
 };

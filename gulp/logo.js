@@ -27,7 +27,7 @@ module.exports = function(gulp, $, info, paths){
   		}
   	}];
 
-  	return src(paths.src + '/images/logo/*.png')
+  	return src(paths.src + '/images/logo/*.png', {encoding: false})
   						 .pipe($.responsive({
   							 '*.png': resizecfg
   						 }))
@@ -36,9 +36,9 @@ module.exports = function(gulp, $, info, paths){
   });
 
   gulp.task('logo-svg', function(){
-	  return src(paths.src + '/images/logo/*.svg')
+	  return src(paths.src + '/images/logo/*.svg', {encoding: false})
 		  .pipe($.imagemin({verbose: true}))
 		  .pipe(dest(paths.target + '/images/logo'));
   });
-	gulp.task('logo', ['logo-svg', 'logo-png']);
+	gulp.task('logo', gulp.parallel('logo-svg', 'logo-png'));
 };
