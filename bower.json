@@ -23,6 +23,6 @@
     "tests"
   ],
   "devDependencies": {
-    "bootstrap-sass": "3.4.1"
+    "bootstrap-sass": "3.4.3"
   }
 }
