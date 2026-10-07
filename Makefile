@@ -37,5 +37,4 @@ install:
 	npm install -g gulp bower
 	npm install
 	bower install
-	npm rebuild node-sass
 	npm rebuild sharp

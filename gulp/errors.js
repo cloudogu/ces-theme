@@ -1,6 +1,8 @@
 module.exports = function (gulp, $, info, paths) {
     'use strict';
 
+    var sass = require('gulp-sass')(require('sass'));
+
     gulp.task('errors-html', function () {
         return gulp.src(paths.src + '/{4,5}*.html')
             .pipe($.replace('{{context}}', '/errors/'))
@@ -16,7 +18,7 @@ module.exports = function (gulp, $, info, paths) {
     gulp.task('errors-css', function () {
         return gulp.src(paths.src + '/scss/errors.scss')
             .pipe($.sourcemaps.init())
-            .pipe($.sass())
+            .pipe(sass())
             .pipe($.cssnano({ autoprefixer: false }))
             .pipe($.sourcemaps.write('.'))
             .pipe(gulp.dest(paths.target + '/errors/css'));
@@ -25,7 +27,7 @@ module.exports = function (gulp, $, info, paths) {
     gulp.task('errors-ces-css', function () {
         return gulp.src(paths.src + '/scss/ces.scss')
             .pipe($.sourcemaps.init())
-            .pipe($.sass())
+            .pipe(sass())
             .pipe($.cssnano())
             .pipe($.sourcemaps.write('.'))
             .pipe(gulp.dest(paths.target + '/errors/css'));

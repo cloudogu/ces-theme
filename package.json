@@ -26,9 +26,10 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-responsive": "^2.14.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^6.0.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^2.0.0",
+    "sass": "^1.105.1",
     "sharp": "^0.23.4"
   },
   "dependencies": {
