@@ -2,6 +2,7 @@ module.exports = function(gulp, $, info, paths){
   'use strict';
 
   var responsive = require('./lib/responsive');
+  var imagemin = require('./lib/imagemin');
 
   gulp.task('favicon-ico', function(){
   	return gulp.src(paths.src + '/favicon.ico', {encoding: false})
@@ -28,7 +29,7 @@ module.exports = function(gulp, $, info, paths){
 
   	return gulp.src(paths.src + '/images/favicon/*', {encoding: false})
   						 .pipe(responsive(resizecfg))
-                         .pipe($.imagemin({verbose: true}))
+                         .pipe(imagemin())
   						 .pipe(gulp.dest(paths.target +'/images/favicon'));
   });
 

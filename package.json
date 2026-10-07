@@ -19,7 +19,6 @@
     "del": "^8.0.1",
     "gulp": "^5.0.1",
     "gulp-gh-pages": "^0.5.4",
-    "gulp-imagemin": "^9.2.0",
     "gulp-json-minify": "^1.2.2",
     "gulp-load-plugins": "^2.0.8",
     "gulp-postcss": "^10.0.0",
@@ -30,7 +29,8 @@
     "html-minifier-next": "^8.10.6",
     "postcss": "^8.5.29",
     "sass": "^1.105.1",
-    "sharp": "^0.35.5"
+    "sharp": "^0.35.5",
+    "svgo": "^4.1.0"
   },
   "dependencies": {
     "font-awesome": "^4.6.3"

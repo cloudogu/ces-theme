@@ -2,6 +2,7 @@ module.exports = function(gulp, $, info, paths){
   'use strict';
 
   var responsive = require('./lib/responsive');
+  var imagemin = require('./lib/imagemin');
 
   const {src, dest} = require('gulp');
 
@@ -31,13 +32,13 @@ module.exports = function(gulp, $, info, paths){
 
   	return src(paths.src + '/images/logo/*.png', {encoding: false})
   						 .pipe(responsive(resizecfg))
-                         .pipe($.imagemin({verbose: true}))
+                         .pipe(imagemin())
   						 .pipe(dest(paths.target + '/images/logo'));
   });
 
   gulp.task('logo-svg', function(){
 	  return src(paths.src + '/images/logo/*.svg', {encoding: false})
-		  .pipe($.imagemin({verbose: true}))
+		  .pipe(imagemin())
 		  .pipe(dest(paths.target + '/images/logo'));
   });
 	gulp.task('logo', gulp.parallel('logo-svg', 'logo-png'));

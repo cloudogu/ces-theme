@@ -2,17 +2,14 @@ import { createRequire } from 'module';
 import fs from 'fs';
 import gulp from 'gulp';
 import loadPlugins from 'gulp-load-plugins';
-import imagemin from 'gulp-imagemin';
 import deploy from 'gulp-gh-pages';
 
 const require = createRequire(import.meta.url);
 const info = require('./package.json');
 const $ = loadPlugins({
   config: info,
-  pattern: ['gulp-*', 'gulp.*', '@*/gulp{-,.}*', '!gulp-imagemin'],
   requireFn: require
 });
-$.imagemin = imagemin;
 
 const paths = {
 	src: './src',

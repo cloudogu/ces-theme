@@ -6,6 +6,7 @@ module.exports = function (gulp, $, info, paths) {
     var cssnano = require('cssnano');
     var responsive = require('./lib/responsive');
     var htmlmin = require('./lib/htmlmin');
+    var imagemin = require('./lib/imagemin');
 
     gulp.task('errors-html', function () {
         return gulp.src(paths.src + '/{4,5}*.html')
@@ -49,7 +50,7 @@ module.exports = function (gulp, $, info, paths) {
                     suffix: '-320px'
                 }
             }))
-            .pipe($.imagemin({ verbose: true }))
+            .pipe(imagemin())
             .pipe(gulp.dest(paths.target + '/errors/images/logo'));
     });
 
@@ -61,25 +62,23 @@ module.exports = function (gulp, $, info, paths) {
                     suffix: '-320px'
                 }
             }))
-            .pipe($.imagemin({ verbose: true }))
+            .pipe(imagemin())
             .pipe(gulp.dest(paths.target + '/errors/images/logo'));
     });
 
     gulp.task('errors-images', function () {
         return gulp.src(paths.src + '/images/*.{jpg,png,gif,svg}', { encoding: false })
-            .pipe($.imagemin({ verbose: true }))
+            .pipe(imagemin())
             .pipe(gulp.dest(paths.target + '/errors/images'));
     });
 
     gulp.task('errors-animations-json', function () {
         return gulp.src(paths.src + '/animations/*.json')
-            .pipe($.imagemin({ verbose: true }))
             .pipe(gulp.dest(paths.target + '/errors/animations'));
     });
 
     gulp.task('errors-animations-scripts', function () {
         return gulp.src(paths.src + '/animations/*.js')
-            .pipe($.imagemin({ verbose: true }))
             .pipe(gulp.dest(paths.target + '/errors/animations'));
     });
 
@@ -108,7 +107,7 @@ module.exports = function (gulp, $, info, paths) {
 
         return gulp.src(paths.src + '/images/favicon/*', { encoding: false })
             .pipe(responsive(resizecfg))
-            .pipe($.imagemin({ verbose: true }))
+            .pipe(imagemin())
             .pipe(gulp.dest(paths.target + '/errors/images/favicon'));
     });
 
