@@ -2,6 +2,7 @@ module.exports = function (gulp, $, info, paths) {
     'use strict';
 
     var sass = require('gulp-sass')(require('sass'));
+    var relativeSourcemaps = require('./lib/relative-sourcemaps');
     var responsive = require('./lib/responsive');
 
     gulp.task('errors-html', function () {
@@ -19,6 +20,7 @@ module.exports = function (gulp, $, info, paths) {
     gulp.task('errors-css', function () {
         return gulp.src(paths.src + '/scss/errors.scss', { sourcemaps: true })
             .pipe(sass())
+            .pipe(relativeSourcemaps())
             .pipe($.cssnano({ autoprefixer: false }))
             .pipe(gulp.dest(paths.target + '/errors/css', { sourcemaps: '.' }));
     });
@@ -26,6 +28,7 @@ module.exports = function (gulp, $, info, paths) {
     gulp.task('errors-ces-css', function () {
         return gulp.src(paths.src + '/scss/ces.scss', { sourcemaps: true })
             .pipe(sass())
+            .pipe(relativeSourcemaps())
             .pipe($.cssnano())
             .pipe(gulp.dest(paths.target + '/errors/css', { sourcemaps: '.' }));
     });
