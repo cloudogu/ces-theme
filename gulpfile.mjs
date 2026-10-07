@@ -2,7 +2,7 @@ import { createRequire } from 'module';
 import fs from 'fs';
 import gulp from 'gulp';
 import loadPlugins from 'gulp-load-plugins';
-import deploy from 'gulp-gh-pages';
+import ghpages from 'gh-pages';
 
 const require = createRequire(import.meta.url);
 const info = require('./package.json');
@@ -28,6 +28,5 @@ tasks.forEach(function(file){
 
 //* Update [github pages](http://cloudogu.github.io/ces-theme/) with `gulp deploy`
 gulp.task('deploy', function () {
-  return gulp.src("./dist/**/*")
-    .pipe(deploy())
+  return ghpages.publish(paths.target);
 });
