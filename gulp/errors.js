@@ -5,11 +5,12 @@ module.exports = function (gulp, $, info, paths) {
     var relativeSourcemaps = require('./lib/relative-sourcemaps');
     var cssnano = require('cssnano');
     var responsive = require('./lib/responsive');
+    var htmlmin = require('./lib/htmlmin');
 
     gulp.task('errors-html', function () {
         return gulp.src(paths.src + '/{4,5}*.html')
             .pipe($.replace('{{context}}', '/errors/'))
-            .pipe($.htmlmin({
+            .pipe(htmlmin({
                 minifyJS: true,
                 minifyCSS: true,
                 removeComments: true,
