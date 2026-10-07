@@ -17,29 +17,23 @@ module.exports = function (gulp, $, info, paths) {
     });
 
     gulp.task('errors-css', function () {
-        return gulp.src(paths.src + '/scss/errors.scss')
-            .pipe($.sourcemaps.init())
+        return gulp.src(paths.src + '/scss/errors.scss', { sourcemaps: true })
             .pipe(sass())
             .pipe($.cssnano({ autoprefixer: false }))
-            .pipe($.sourcemaps.write('.'))
-            .pipe(gulp.dest(paths.target + '/errors/css'));
+            .pipe(gulp.dest(paths.target + '/errors/css', { sourcemaps: '.' }));
     });
 
     gulp.task('errors-ces-css', function () {
-        return gulp.src(paths.src + '/scss/ces.scss')
-            .pipe($.sourcemaps.init())
+        return gulp.src(paths.src + '/scss/ces.scss', { sourcemaps: true })
             .pipe(sass())
             .pipe($.cssnano())
-            .pipe($.sourcemaps.write('.'))
-            .pipe(gulp.dest(paths.target + '/errors/css'));
+            .pipe(gulp.dest(paths.target + '/errors/css', { sourcemaps: '.' }));
     });
 
     gulp.task('errors-scripts', function () {
-        return gulp.src(paths.src + '/scripts/{4,5}*.js')
-            .pipe($.sourcemaps.init())
+        return gulp.src(paths.src + '/scripts/{4,5}*.js', { sourcemaps: true })
             .pipe($.uglify())
-            .pipe($.sourcemaps.write('.'))
-            .pipe(gulp.dest(paths.target + '/errors/scripts'));
+            .pipe(gulp.dest(paths.target + '/errors/scripts', { sourcemaps: '.' }));
     });
 
     gulp.task('errors-logo-blib', function () {
