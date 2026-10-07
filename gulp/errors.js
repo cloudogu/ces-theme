@@ -3,6 +3,7 @@ module.exports = function (gulp, $, info, paths) {
 
     var sass = require('gulp-sass')(require('sass'));
     var relativeSourcemaps = require('./lib/relative-sourcemaps');
+    var cssnano = require('cssnano');
     var responsive = require('./lib/responsive');
 
     gulp.task('errors-html', function () {
@@ -21,7 +22,7 @@ module.exports = function (gulp, $, info, paths) {
         return gulp.src(paths.src + '/scss/errors.scss', { sourcemaps: true })
             .pipe(sass())
             .pipe(relativeSourcemaps())
-            .pipe($.cssnano({ autoprefixer: false }))
+            .pipe($.postcss([cssnano()]))
             .pipe(gulp.dest(paths.target + '/errors/css', { sourcemaps: '.' }));
     });
 
@@ -29,7 +30,7 @@ module.exports = function (gulp, $, info, paths) {
         return gulp.src(paths.src + '/scss/ces.scss', { sourcemaps: true })
             .pipe(sass())
             .pipe(relativeSourcemaps())
-            .pipe($.cssnano())
+            .pipe($.postcss([cssnano()]))
             .pipe(gulp.dest(paths.target + '/errors/css', { sourcemaps: '.' }));
     });
 
