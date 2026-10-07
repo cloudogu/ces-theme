@@ -13,9 +13,6 @@
   "engines": {
     "node": ">=20.19.0"
   },
-  "overrides": {
-    "form-data": "2.5.6"
-  },
   "devDependencies": {
     "browser-sync": "^3.0.4",
     "del": "^8.0.1",
@@ -35,7 +32,6 @@
     "sharp": "^0.35.5"
   },
   "dependencies": {
-    "font-awesome": "^4.6.3",
-    "form-data": "2.5.6"
+    "font-awesome": "^4.6.3"
   }
 }
