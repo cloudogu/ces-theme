@@ -438,3 +438,12 @@ a:hover, a:focus {
   color: #fff;
   text-underline: #fff;
 }
+
+.nav-tabs.nav-justified > .active > a:hover,
+.nav-tabs.nav-justified > .active > a:focus {
+  border: 1px solid $nav-tabs-justified-link-border-color;
+
+  @media (min-width: $screen-sm-min) {
+    border-bottom-color: $nav-tabs-justified-active-link-border-color;
+  }
+}
