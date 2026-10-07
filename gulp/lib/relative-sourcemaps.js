@@ -7,7 +7,7 @@ module.exports = function relativeSourcemaps(){
   return transform(function(file){
     if (file.sourceMap) {
       file.sourceMap.sources = file.sourceMap.sources.map(function(source){
-        var absolute = path.resolve('/', source);
+        var absolute = path.resolve('/', decodeURIComponent(source));
         if (absolute.indexOf(file.cwd + path.sep) !== 0) {
           return source;
         }
