@@ -2,6 +2,7 @@ module.exports = function (gulp, $, info, paths) {
     'use strict';
 
     var sass = require('gulp-sass')(require('sass'));
+    var responsive = require('./lib/responsive');
 
     gulp.task('errors-html', function () {
         return gulp.src(paths.src + '/{4,5}*.html')
@@ -43,12 +44,10 @@ module.exports = function (gulp, $, info, paths) {
 
     gulp.task('errors-logo-blib', function () {
         return gulp.src(paths.src + '/images/logo/blib-white.png', { encoding: false })
-            .pipe($.responsive({
-                '*.png': {
-                    width: 320,
-                    rename: {
-                        suffix: '-320px'
-                    }
+            .pipe(responsive({
+                width: 320,
+                rename: {
+                    suffix: '-320px'
                 }
             }))
             .pipe($.imagemin({ verbose: true }))
@@ -57,12 +56,10 @@ module.exports = function (gulp, $, info, paths) {
 
     gulp.task('errors-logo', function () {
         return gulp.src(paths.src + '/images/logo/logo-white.png', { encoding: false })
-            .pipe($.responsive({
-                '*.png': {
-                    width: 320,
-                    rename: {
-                        suffix: '-320px'
-                    }
+            .pipe(responsive({
+                width: 320,
+                rename: {
+                    suffix: '-320px'
                 }
             }))
             .pipe($.imagemin({ verbose: true }))
@@ -111,9 +108,7 @@ module.exports = function (gulp, $, info, paths) {
             }];
 
         return gulp.src(paths.src + '/images/favicon/*', { encoding: false })
-            .pipe($.responsive({
-                '*.png': resizecfg
-            }))
+            .pipe(responsive(resizecfg))
             .pipe($.imagemin({ verbose: true }))
             .pipe(gulp.dest(paths.target + '/errors/images/favicon'));
     });

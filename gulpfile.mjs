@@ -23,7 +23,7 @@ const paths = {
 // gulp.parallel/gulp.series resolve task names eagerly, so composite tasks must be registered last
 const compositeTasks = ['default.js', 'serve.js'];
 const tasks = fs.readdirSync('./gulp').filter(function(file){
-  return compositeTasks.indexOf(file) === -1;
+  return file.endsWith('.js') && compositeTasks.indexOf(file) === -1;
 }).concat(compositeTasks);
 tasks.forEach(function(file){
   require('./gulp/' + file)(gulp, $, info, paths);
