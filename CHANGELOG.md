@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Update build toolchain to gulp v5 and Dart Sass; replace abandoned gulp plugins and bower
+  - computed colors in the unminified `ces.css` are now written as `rgb()` instead of hex
+- Bump bootstrap-sass to v3.4.3
+- Bump required Node version to v24
+
+### Fixed
+- Fix absolute paths in CSS source maps
 
 ## [v0.9.1] - 2025-08-06
 ### Security
