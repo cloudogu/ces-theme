@@ -1,10 +1,17 @@
 'use strict';
 
 var gulp = require('gulp');
+var sass = require('gulp-sass')(require('sass'));
 var postcss = require('gulp-postcss');
 var cssnano = require('cssnano');
 var ghpages = require('gh-pages');
 var info = require('./package.json');
+
+var paths = {
+	src: './src',
+	target: './dist',
+	vendor: './node_modules'
+};
 
 var $ = {
   cssnano: function(){
@@ -17,14 +24,11 @@ var $ = {
   rename: require('gulp-rename'),
   replace: require('gulp-replace'),
   responsive: require('./gulp/lib/responsive'),
-  sass: require('gulp-sass')(require('sass')),
+  sass: function(){
+    // bootstrap-sass 3 depends on @import and global variable overrides
+    return sass({ loadPaths: [paths.vendor], quietDeps: true, silenceDeprecations: ['import'] });
+  },
   uglify: require('gulp-uglify')
-};
-
-var paths = {
-	src: './src',
-	target: './dist',
-	vendor: './node_modules'
 };
 
 // gulp.parallel/gulp.series resolve task names eagerly, so composite tasks must be registered last
