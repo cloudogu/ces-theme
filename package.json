@@ -10,9 +10,6 @@
     "css"
   ],
   "license": "AGPL-3.0-only",
-  "engines": {
-    "node": "^22.22.3 || ^24.15.0 || >=26.0"
-  },
   "devDependencies": {
     "bootstrap-sass": "3.4.3",
     "browser-sync": "^3.0.4",
