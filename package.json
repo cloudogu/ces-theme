@@ -10,8 +10,8 @@
     "css"
   ],
   "license": "AGPL-3.0-only",
-  "resolutions": {
-    "form-data": "2.5.4"
+  "overrides": {
+    "form-data": "2.5.6"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",
@@ -33,6 +33,6 @@
   },
   "dependencies": {
     "font-awesome": "^4.6.3",
-    "form-data": "2.5.4"
+    "form-data": "2.5.6"
   }
 }
