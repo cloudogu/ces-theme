@@ -13,7 +13,7 @@ module.exports = function(gulp, $, info, paths){
 
   	browserSync.init(files, {
   		server: {
-  			baseDir: [paths.target, paths.src, paths.vendor]
+  			baseDir: [paths.target, paths.src]
   		}
   	});
 

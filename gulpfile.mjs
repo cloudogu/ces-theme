@@ -16,7 +16,7 @@ const $ = {
 const paths = {
 	src: './src',
 	target: './dist',
-	vendor: './bower_components'
+	vendor: './node_modules'
 };
 
 // gulp.parallel/gulp.series resolve task names eagerly, so composite tasks must be registered last

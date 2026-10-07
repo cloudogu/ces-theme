@@ -26,14 +26,12 @@ gen-audit-severity-all: gen-audit-dev
 
 .PHONY: build
 build: install
-	gulp
+	npx gulp
 
 .PHONY: serve
 serve: install
-	gulp serve
+	npx gulp serve
 
 .PHONY: install
 install:
-	npm install -g gulp bower
 	npm install
-	bower install

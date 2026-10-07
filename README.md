@@ -9,7 +9,6 @@ Theme for CES WebApplications, based on Twitter Bootstrap.
   - Install [Node Version Manager](https://github.com/nvm-sh/nvm)
 * You need to use Node 24 (at least Node 22.22.3 or 24.15.0)
   * `nvm install && nvm use` (picks up the version from `.nvmrc`)
-* Then install gulp and bower globally with `npm install -g gulp bower`
 * Clone the repository
 * Build
 ```
