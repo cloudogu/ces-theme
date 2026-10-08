@@ -8,6 +8,7 @@ module.exports = function(gulp, $, info, paths){
       gulp.src([paths.src + '/scss/*.scss', '!' + paths.src + '/scss/_*'], {sourcemaps: true}),
       $.sass(),
       $.relativeSourcemaps(),
+      $.roundColors(),
       gulp.dest(paths.target + '/css'),
       $.cssnano(),
       $.rename({ suffix: '.min' }),

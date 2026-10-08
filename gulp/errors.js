@@ -23,6 +23,7 @@ module.exports = function (gulp, $, info, paths) {
             gulp.src([paths.src + '/scss/errors.scss', paths.src + '/scss/ces.scss'], { sourcemaps: true }),
             $.sass(),
             $.relativeSourcemaps(),
+            $.roundColors(),
             $.cssnano(),
             gulp.dest(paths.target + '/errors/css', { sourcemaps: '.' }),
             done

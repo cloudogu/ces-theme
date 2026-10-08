@@ -25,6 +25,9 @@ var $ = {
   rename: require('gulp-rename'),
   replace: require('gulp-replace'),
   responsive: require('./gulp/lib/responsive'),
+  roundColors: function(){
+    return postcss([require('./gulp/lib/round-colors')()]);
+  },
   sass: function(){
     // bootstrap-sass 3 depends on @import and global variable overrides; quietDeps would also hide our own partials
     return sass({ loadPaths: [paths.vendor], silenceDeprecations: ['import'], verbose: true, logger: require('./gulp/lib/sass-logger') });
