@@ -10,15 +10,17 @@ result-dir:
 .PHONY: gen-audit-prod
 gen-audit-prod: result-dir
 	@-npm audit --json --omit=dev 1> target/audit_prod.json
+	@jq -e 'has("vulnerabilities")' target/audit_prod.json > /dev/null || (cat target/audit_prod.json; exit 1)
 
 .PHONY: gen-audit-dev
 gen-audit-dev: result-dir
-	@-npm audit --json 1> target/audit_dev.json
+	@-npm audit --json --include=dev 1> target/audit_dev.json
+	@jq -e 'has("vulnerabilities")' target/audit_dev.json > /dev/null || (cat target/audit_dev.json; exit 1)
 
 .PHONY: gen-audit-severity-all
 gen-audit-severity-all: gen-audit-dev
-	@for severity in low moderate high critical; do \
-		jq --arg severity $$severity '.vulnerabilities | with_entries(select(.value.severity == $$severity))' target/audit_dev.json 1> target/audit_dev_$$severity.json; \
+	@for severity in info low moderate high critical; do \
+		jq --arg severity $$severity '.vulnerabilities | with_entries(select(.value.severity == $$severity))' target/audit_dev.json 1> target/audit_dev_$$severity.json || exit 1; \
 	done
 
 .PHONY: build
