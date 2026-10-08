@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bump bootstrap-sass to v3.4.3
 - Bump required Node to v24
 - `ces.min.css` and `errors/css/ces.css` now keep bootstrap's z-index values (e.g. `.modal` 1050 instead of 10)
-  - overlays positioned against the old values may now render below modals, dropdowns and tooltips
+  - overlays positioned against the old dynamic values may now render below modals, dropdowns and tooltips
 
 ## [v0.9.1] - 2025-08-06
 ### Security
