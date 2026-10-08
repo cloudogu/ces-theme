@@ -1,7 +1,9 @@
+@use "sass:color";
+
 @import "variables";
 @import "fonts";
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "thumbnail-primary";
 @import "utils";
 
@@ -37,7 +39,7 @@ td.inactive, .table > thead > tr > th.inactive, .table > thead > tr.inactive > t
 }
 
 .alert-warning .alert-link {
-  color: change-color($brand-warning, $saturation: 90%, $lightness: 30%);
+  color: color.change($brand-warning, $saturation: 90%, $lightness: 30%);
 }
 
 .alert-danger .alert-link {
@@ -45,7 +47,7 @@ td.inactive, .table > thead > tr > th.inactive, .table > thead > tr.inactive > t
 }
 
 .alert-info .alert-link {
-  color: lighten($brand-info, 46.7%);
+  color: color.adjust($brand-info, $lightness: 46.7%);
 }
 
 .close {
@@ -435,4 +437,13 @@ a:hover, a:focus {
 .tooltip-inner > a{
   color: #fff;
   text-underline: #fff;
+}
+
+.nav-tabs.nav-justified > .active > a:hover,
+.nav-tabs.nav-justified > .active > a:focus {
+  border: 1px solid $nav-tabs-justified-link-border-color;
+
+  @media (min-width: $screen-sm-min) {
+    border-bottom-color: $nav-tabs-justified-active-link-border-color;
+  }
 }

@@ -1,9 +1,14 @@
 module.exports = function(gulp, $, info, paths){
-  'use strict';
+    'use strict';
 
-    gulp.task('images', function(){
-        return gulp.src(paths.src + '/images/*.{jpg,png,gif,svg}')
-            .pipe($.imagemin({verbose: true}))
-            .pipe(gulp.dest(paths.target + '/images'));
+    var pipeline = require('stream').pipeline;
+
+    gulp.task('images', function(done){
+        pipeline(
+            gulp.src(paths.src + '/images/*.{jpg,png,gif,svg}', {encoding: false}),
+            $.imagemin(),
+            gulp.dest(paths.target + '/images'),
+            done
+        );
     });
 };

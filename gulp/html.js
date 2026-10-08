@@ -1,16 +1,21 @@
 module.exports = function(gulp, $, info, paths){
   'use strict';
 
-  gulp.task('html', function(){
-  	return gulp.src(paths.src + '/*.html')
-               .pipe($.replace('{{context}}', ''))
-               .pipe($.htmlmin({
-                    minifyJS: true,
-                    minifyCSS: true,
-                    removeComments: true,
-                    collapseWhitespace: true
-               }))
-               .pipe(gulp.dest(paths.target));
+  var pipeline = require('stream').pipeline;
+
+  gulp.task('html', function(done){
+    pipeline(
+      gulp.src(paths.src + '/*.html'),
+      $.replace('{{context}}', ''),
+      $.htmlmin({
+        minifyJS: true,
+        minifyCSS: true,
+        removeComments: true,
+        collapseWhitespace: true
+      }),
+      gulp.dest(paths.target),
+      done
+    );
   });
 
 };
