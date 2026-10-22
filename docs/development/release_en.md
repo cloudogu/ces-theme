@@ -14,7 +14,7 @@
    2. `git commit -m "increase version"`.
 6. maintain `CHANGELOG.md` (according to [keepachangelog.com](https://keepachangelog.com/en/1.0.0/))
    1. `git add CHANGELOG.md && git commit -m "update changelog"`.
-7. `gulp`.
+7. `make`
 8. commit changes to `dist/` directory
    1. `git add . && git commit -m "Update dist"`
 9. `git flow release finish -s NEWVERSION`
