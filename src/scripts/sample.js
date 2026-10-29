@@ -15,8 +15,7 @@
   });
 
   var $button = $("<div id='source-button' class='btn btn-primary btn-xs'>&lt; &gt;</div>").click(function(){
-    var html = $(this).parent().html();
-    html = cleanSource(html);
+    var html = cleanSource($(this).parent());
     $("#source-modal pre").text(html);
     $("#source-modal").modal();
   });
@@ -31,32 +30,61 @@
     $button.hide();
   });
 
-  function cleanSource(html) {
-    html = html.replace(/×/g, "&close;")
-               .replace(/«/g, "&laquo;")
-               .replace(/»/g, "&raquo;")
-               .replace(/←/g, "&larr;")
-               .replace(/→/g, "&rarr;");
+  function cleanSource($container) {
+    var lines = [];
 
-    var lines = html.split(/\n/);
-
-    lines.shift();
-    lines.splice(-1, 1);
-
-    var indentSize = lines[0].length - lines[0].trim().length,
-        re = new RegExp(" {" + indentSize + "}");
-
-    lines = lines.map(function(line){
-      if (line.match(re)) {
-        line = line.substring(indentSize);
-      }
-
-      return line;
+    $container.contents().each(function(){
+      formatNode(this, "", lines);
     });
 
-    lines = lines.join("\n");
+    return lines.join("\n")
+                .replace(/×/g, "&times;")
+                .replace(/«/g, "&laquo;")
+                .replace(/»/g, "&raquo;")
+                .replace(/←/g, "&larr;")
+                .replace(/→/g, "&rarr;");
+  }
 
-    return lines;
+  function formatNode(node, indent, lines) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      var text = collapseWhitespace($("<div>").text(node.nodeValue).html());
+      if (text) {
+        lines.push(indent + text);
+      }
+      return;
+    }
+
+    if (node.nodeType !== Node.ELEMENT_NODE || node.id === "source-button") {
+      return;
+    }
+
+    var tag = node.cloneNode(false).outerHTML,
+        closeTag = "</" + node.localName + ">";
+
+    if (tag.slice(-closeTag.length) !== closeTag) {
+      lines.push(indent + tag);
+      return;
+    }
+
+    var openTag = tag.slice(0, -closeTag.length),
+        hasText = $(node).contents().filter(function(){
+          return this.nodeType === Node.TEXT_NODE && this.nodeValue.trim();
+        }).length;
+
+    if (hasText || !node.children.length) {
+      lines.push(indent + openTag + collapseWhitespace(node.innerHTML) + closeTag);
+      return;
+    }
+
+    lines.push(indent + openTag);
+    $(node).contents().each(function(){
+      formatNode(this, indent + "    ", lines);
+    });
+    lines.push(indent + closeTag);
+  }
+
+  function collapseWhitespace(html) {
+    return html.replace(/\s+/g, " ").trim();
   }
 
 })();
