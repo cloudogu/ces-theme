@@ -1,14 +1,17 @@
 module.exports = function(gulp, $, info, paths){
   'use strict';
 
-  gulp.task('scripts', function(){
-  	return gulp.src(paths.src + '/scripts/*.js')
-  						 .pipe($.sourcemaps.init())
-     					 .pipe($.uglify())
-  						 .pipe(gulp.dest(paths.target + '/scripts'))
-  						 .pipe($.rename({ suffix: '.min' }))
-  						 .pipe($.sourcemaps.write('.'))
-  						 .pipe(gulp.dest(paths.target + '/scripts'));
+  var pipeline = require('stream').pipeline;
+
+  gulp.task('scripts', function(done){
+    pipeline(
+      gulp.src(paths.src + '/scripts/*.js', {sourcemaps: true}),
+      $.uglify(),
+      gulp.dest(paths.target + '/scripts'),
+      $.rename({ suffix: '.min' }),
+      gulp.dest(paths.target + '/scripts', {sourcemaps: '.'}),
+      done
+    );
   });
 
 };

@@ -1,41 +1,36 @@
 .DEFAULT_GOAL:=build
 
 .PHONY: gen-audit
-gen-audit: gen-audit-severity gen-audit-prod
+gen-audit: gen-audit-severity-all gen-audit-prod
 
 .PHONY: result-dir
 result-dir:
-	@mkdir -p tmp
+	@mkdir -p target
 
 .PHONY: gen-audit-prod
 gen-audit-prod: result-dir
-	@mkdir -p target
-	@-npm audit --json --prod 1> target/audit_prod.json
+	@-npm audit --json --omit=dev 1> target/audit_prod.json
+	@jq -e 'has("vulnerabilities")' target/audit_prod.json > /dev/null || (cat target/audit_prod.json; exit 1)
 
 .PHONY: gen-audit-dev
 gen-audit-dev: result-dir
-	@mkdir -p target
-	@-npm audit --json --dev 1> target/audit_dev.json
+	@-npm audit --json --include=dev 1> target/audit_dev.json
+	@jq -e 'has("vulnerabilities")' target/audit_dev.json > /dev/null || (cat target/audit_dev.json; exit 1)
 
 .PHONY: gen-audit-severity-all
 gen-audit-severity-all: gen-audit-dev
-	@cat target/audit_dev.json | jq '.advisories | with_entries(select(.value.severity == "low"))' 1> target/audit_dev_low.json
-	@cat target/audit_dev.json | jq '.advisories | with_entries(select(.value.severity == "moderate"))' 1> target/audit_dev_moderate.json
-	@cat target/audit_dev.json | jq '.advisories | with_entries(select(.value.severity == "high"))' 1> target/audit_dev_high.json
-	@cat target/audit_dev.json | jq '.advisories | with_entries(select(.value.severity == "critical"))' 1> target/audit_dev_critical.json
+	@for severity in info low moderate high critical; do \
+		jq --arg severity $$severity '.vulnerabilities | with_entries(select(.value.severity == $$severity))' target/audit_dev.json 1> target/audit_dev_$$severity.json || exit 1; \
+	done
 
 .PHONY: build
 build: install
-	gulp
+	npx gulp
 
 .PHONY: serve
 serve: install
-	gulp serve
+	npx gulp serve
 
 .PHONY: install
 install:
-	npm install -g gulp bower
 	npm install
-	bower install
-	npm rebuild node-sass
-	npm rebuild sharp

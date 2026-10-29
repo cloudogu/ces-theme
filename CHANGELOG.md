@@ -4,7 +4,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [v0.10.0] - 2026-10-29
+### Changed
+- Update build toolchain to gulp v5 and Dart Sass; replace abandoned gulp plugins and bower
+- Bump bootstrap-sass to v3.4.3
+- Bump required Node to v24
+- `ces.min.css` and `errors/css/ces.css` now keep bootstrap's z-index values (e.g. `.modal` 1050 instead of 10)
+  - overlays positioned against the old dynamic values may now render below modals, dropdowns and tooltips
+
+## [v0.9.1] - 2025-08-06
+### Security
+- #46 Fixed [CVE-2025-7783](https://nvd.nist.gov/vuln/detail/CVE-2025-7783)
+
+## [v0.9.0] - 2024-09-18
+### Changed
+- Relicense to AGPL-3.0-only
+
 ## [v0.8.0] - 2024-09-02
 - Add new alpaca mascot image to theme
 

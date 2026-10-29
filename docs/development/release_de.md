@@ -14,7 +14,7 @@
    2. `git commit -m "Bump version"`
 6. `CHANGELOG.md` pflegen (nach [keepachangelog.com](https://keepachangelog.com/en/1.0.0/))
    1. `git add CHANGELOG.md && git commit -m "Update changelog"`
-7. `gulp`
+7. `make`
 8. Änderungen im `dist/`-Verzeichnis committen
    1. `git add . && git commit -m "Update dist"`
 9. `git flow release finish -s NEWVERSION`

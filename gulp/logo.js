@@ -1,44 +1,26 @@
 module.exports = function(gulp, $, info, paths){
   'use strict';
 
-  const {src, dest} = require('gulp');
+  var pipeline = require('stream').pipeline;
 
-  gulp.task('logo-png', function(){
-  	var resizecfg = [{
-  		width: 640,
-  		rename: {
-  			suffix: '-640px'
-  		}
-  	},{
-  	  width: 320,
-  		rename: {
-  			suffix: '-320px'
-  		}
-  	},{
-  		width: 160,
-  		rename: {
-  			suffix: '-160px'
-  		}
-  	},{
-  		width: 30,
-  		quality: 100,
-  		rename: {
-  			suffix: '-30px'
-  		}
-  	}];
-
-  	return src(paths.src + '/images/logo/*.png')
-  						 .pipe($.responsive({
-  							 '*.png': resizecfg
-  						 }))
-                         .pipe($.imagemin({verbose: true}))
-  						 .pipe(dest(paths.target + '/images/logo'));
+  gulp.task('logo-png', function(done){
+    pipeline(
+      gulp.src(paths.src + '/images/logo/*.png', {encoding: false}),
+      $.responsive([640, 320, 160, 30]),
+      $.imagemin(),
+      gulp.dest(paths.target + '/images/logo'),
+      done
+    );
   });
 
-  gulp.task('logo-svg', function(){
-	  return src(paths.src + '/images/logo/*.svg')
-		  .pipe($.imagemin({verbose: true}))
-		  .pipe(dest(paths.target + '/images/logo'));
+  gulp.task('logo-svg', function(done){
+    pipeline(
+      gulp.src(paths.src + '/images/logo/*.svg', {encoding: false}),
+      $.imagemin(),
+      gulp.dest(paths.target + '/images/logo'),
+      done
+    );
   });
-	gulp.task('logo', ['logo-svg', 'logo-png']);
+
+  gulp.task('logo', gulp.parallel('logo-svg', 'logo-png'));
 };
