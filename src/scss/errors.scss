@@ -191,25 +191,25 @@ body, html {
         .description h1{
             font-size: 4rem;
         }
+        .code, .description {
+            width: 30vw;
+            display: flex;
+            margin-bottom: 10vh;
+        }
+        .code {
+            align-items: flex-end;
+        }
+        .description {
+            flex-direction: column;
+            justify-content: flex-end;
+            h1 {
+                margin-bottom: 10px;
+            }
+        }
     }
     #lottie {
         height: 70vh;
         width: 20vw;
-    }
-    .code, .description {
-        width: 30vw;
-        display: flex;
-        margin-bottom: 10vh;
-    }
-    .code {
-        align-items: flex-end;
-    }
-    .description {
-        flex-direction: column;
-       justify-content: flex-end;
-        h1 {
-            margin-bottom: 10px;
-        }
     }
 }
 
