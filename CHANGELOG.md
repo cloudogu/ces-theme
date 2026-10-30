@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+### Changed
+- `gulp deploy` publishes `dist/` of the release tag matching the `package.json` version to GitHub Pages
+### Fixed
+- Fit 404 error page animation into viewport so it no longer causes a scrollbar
+
 ## [v0.10.1] - 2026-10-30
 ### Added
 - Add 403 Forbidden error page

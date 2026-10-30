@@ -26,14 +26,9 @@ Theme for CES WebApplications, based on Twitter Bootstrap.
 }
 ```
 
-## Deployment to Github Pages
-* Build (see above)
-   - This will get you the `dist` folder
-* Copy `dist` folder
-* Checkout `gh-pages` branch
-* Replace everything in it with the new content in the `dist` folder you copied earlier
-* Commit
-* You are done! Release to Github Pages is executed automatically
+## Release and Deployment to Github Pages
+* Releasing a new version and updating [GitHub Pages](https://cloudogu.github.io/ces-theme/) is described in the
+  [release documentation](docs/development/release_en.md)
 
 
 ---
