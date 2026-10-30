@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.10.1] - 2026-10-30
+### Added
+- Add 403 Forbidden error page
+
+### Fixed
+- Remove excessive spacing between error code and description on the 408, 502 and 504 error pages
+- Fix source button on theme preview page, which failed on the minified HTML; the source is now formatted from the DOM
+- Overlay source button on theme preview page so hovering a component no longer shifts the layout
+
 ## [v0.10.0] - 2026-10-29
 ### Changed
 - Update build toolchain to gulp v5 and Dart Sass; replace abandoned gulp plugins and bower

@@ -162,24 +162,24 @@ body, html {
   .content-container .description h1 {
     font-size: 4rem;
   }
-  #lottie {
-    height: 70vh;
-    width: 20vw;
-  }
-  .code, .description {
+  .content-container .code, .content-container .description {
     width: 30vw;
     display: flex;
     margin-bottom: 10vh;
   }
-  .code {
+  .content-container .code {
     align-items: flex-end;
   }
-  .description {
+  .content-container .description {
     flex-direction: column;
     justify-content: flex-end;
   }
-  .description h1 {
+  .content-container .description h1 {
     margin-bottom: 10px;
+  }
+  #lottie {
+    height: 70vh;
+    width: 20vw;
   }
 }
 @media (min-width: 920px) {
