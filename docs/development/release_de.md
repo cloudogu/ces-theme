@@ -18,7 +18,7 @@ Der gebaute `dist/`-Ordner ist Teil des Repositorys. Jede Änderung in `src/` wi
    (nach [keepachangelog.com](https://keepachangelog.com/en/1.0.0/))
 6. `make`
    * `git status` sollte keine Änderungen in `dist/` zeigen; falls doch, diese mit dem Release committen
-7. `git add package.json package-lock.json CHANGELOG.md dist && git commit -m "Prepare release <version>"`
+7. `git add package.json package-lock.json CHANGELOG.md dist && git commit -m "Prepare release for <version>"`
 8. `git flow release finish -s -m "Release <version>" <version>`
    * merged das Release in `master` und `develop` und erstellt den signierten Release-Tag
 9. `git push origin master develop <version>`
